@@ -2,6 +2,14 @@ trigger:
 - release
 - dev
 
+pr:
+  branches:
+    include:
+    - dev
+  paths:
+    exclude:
+    - azure-*.yml
+
 jobs:
 - job: Linux
   timeoutInMinutes: 120
