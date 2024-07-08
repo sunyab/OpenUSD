@@ -1,0 +1,22 @@
+name: Build USD
+
+on:
+  push:
+    branches:
+      - action_test
+
+jobs:
+  macOS:
+    runs-on: macos-12
+    timeout-minutes: 120
+    steps:
+      - name: Install usd-core
+        run: |
+          export PATH=/Applications/CMake.app/Contents/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH
+          sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+          export SYSTEM_VERSION_COMPAT=1
+          pip3 install usd-core
+      - name: Test
+        run: |
+          export PATH=/Applications/CMake.app/Contents/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:$PATH
+          python3 -c "from pxr import Usd; print(Usd.GetVersion())"
