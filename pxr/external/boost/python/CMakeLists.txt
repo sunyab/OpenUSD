@@ -13,6 +13,10 @@ if (PXR_USE_INTERNAL_BOOST_PYTHON)
         ${PYTHON_LIBRARIES}
     )
 
+    set(include_dirs
+        ${PYTHON_INCLUDE_DIRS}
+    )
+
     set(cppfiles
         src/converter/arg_to_python_base.cpp
         src/converter/builtin_converters.cpp
