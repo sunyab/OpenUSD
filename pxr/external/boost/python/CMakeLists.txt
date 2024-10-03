@@ -10,7 +10,7 @@ set(cppfiles "")
 # Otherwise, this library is just a pass-through for boost::python.
 if (PXR_USE_INTERNAL_BOOST_PYTHON)
     set(libs
-        Python3::Python
+        ${PYTHON_LIBRARIES}
     )
 
     set(cppfiles
