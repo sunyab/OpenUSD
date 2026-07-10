@@ -197,9 +197,9 @@ pxr_register_test(testUsdImagingGLBasicDrawing
     FAIL 0.2
     FAIL_PERCENT 0.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_refined
@@ -209,10 +209,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_leftHanded
@@ -222,10 +222,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_leftHanded
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_clipped
@@ -235,10 +235,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_clipped
     FAIL 1
     FAIL_PERCENT 0.9
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_id
@@ -248,10 +248,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_id
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_subdivTags
@@ -261,10 +261,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_subdivTags
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_subdivTagsRefined
@@ -274,10 +274,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_subdivTagsRefined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_inputShaderEncoding
@@ -287,10 +287,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_inputShaderEncoding
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawing_textureChannels
@@ -302,10 +302,10 @@ pxr_register_test(testUsdImagingGLBasicDrawing_textureChannels
     WARN 0.02
     WARN_PERCENT 0.05
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawing
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicDrawingNonBindless_batch
@@ -315,10 +315,10 @@ pxr_register_test(testUsdImagingGLBasicDrawingNonBindless_batch
     FAIL 1
     FAIL_PERCENT 1.4
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicDrawingNonBindless
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicLighting
@@ -328,8 +328,8 @@ pxr_register_test(testUsdImagingGLBasicLighting
     FAIL 0.5
     FAIL_PERCENT 0.1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicLighting
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasicLighting_refined
@@ -339,8 +339,8 @@ pxr_register_test(testUsdImagingGLBasicLighting_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasicLighting
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves
@@ -350,8 +350,8 @@ pxr_register_test(testUsdImagingGLCurves
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves_refined
@@ -361,8 +361,8 @@ pxr_register_test(testUsdImagingGLCurves_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves_moreCurves
@@ -372,8 +372,8 @@ pxr_register_test(testUsdImagingGLCurves_moreCurves
     FAIL 1
     FAIL_PERCENT 0.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves_moreCurves_refined
@@ -383,8 +383,8 @@ pxr_register_test(testUsdImagingGLCurves_moreCurves_refined
     FAIL 1
     FAIL_PERCENT 0.9
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves_moreCurves_faketubes
@@ -394,8 +394,8 @@ pxr_register_test(testUsdImagingGLCurves_moreCurves_faketubes
     FAIL 1
     FAIL_PERCENT 0.9
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves_moreCurves_tubes
@@ -405,8 +405,8 @@ pxr_register_test(testUsdImagingGLCurves_moreCurves_tubes
     FAIL 1
     FAIL_PERCENT 0.9
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCurves_pinnedCurves
@@ -416,8 +416,8 @@ pxr_register_test(testUsdImagingGLCurves_pinnedCurves
     FAIL 1
     FAIL_PERCENT 0.2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPoints
@@ -427,8 +427,8 @@ pxr_register_test(testUsdImagingGLPoints
     FAIL 1
     FAIL_PERCENT 0.9
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPoints
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPoints_clipped
@@ -438,8 +438,8 @@ pxr_register_test(testUsdImagingGLPoints_clipped
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPoints
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPoints_zoom
@@ -449,8 +449,8 @@ pxr_register_test(testUsdImagingGLPoints_zoom
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPoints
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPoints_zoom_pan
@@ -460,8 +460,8 @@ pxr_register_test(testUsdImagingGLPoints_zoom_pan
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPoints
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_ZupFront
@@ -471,6 +471,7 @@ pxr_register_test(testUsdImagingGLDomeLight_ZupFront
     FAIL_PERCENT 0.005
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_ZupBack
@@ -480,6 +481,7 @@ pxr_register_test(testUsdImagingGLDomeLight_ZupBack
     FAIL_PERCENT 0.006
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_YupFront
@@ -489,6 +491,7 @@ pxr_register_test(testUsdImagingGLDomeLight_YupFront
     FAIL_PERCENT 0.002
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_YupBack
@@ -498,6 +501,7 @@ pxr_register_test(testUsdImagingGLDomeLight_YupBack
     FAIL_PERCENT 0.003
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_multi
@@ -507,6 +511,7 @@ pxr_register_test(testUsdImagingGLDomeLight_multi
     FAIL_PERCENT 0.001
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_metallic
@@ -516,6 +521,7 @@ pxr_register_test(testUsdImagingGLDomeLight_metallic
     FAIL_PERCENT 0.001
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_rough
@@ -525,6 +531,7 @@ pxr_register_test(testUsdImagingGLDomeLight_rough
     FAIL_PERCENT 0.005
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_grid
@@ -534,6 +541,7 @@ pxr_register_test(testUsdImagingGLDomeLight_grid
     FAIL_PERCENT 0.5
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_metallic_specwf
@@ -543,6 +551,7 @@ pxr_register_test(testUsdImagingGLDomeLight_metallic_specwf
     FAIL_PERCENT 0.4
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_grid_specwf
@@ -552,6 +561,7 @@ pxr_register_test(testUsdImagingGLDomeLight_grid_specwf
     FAIL_PERCENT 0.6
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLight_invis
@@ -561,6 +571,7 @@ pxr_register_test(testUsdImagingGLDomeLight_invis
     FAIL_PERCENT 0.2
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDoubleSided
@@ -568,8 +579,8 @@ pxr_register_test(testUsdImagingGLDoubleSided
     IMAGE_DIFF_COMPARE
         testUsdImagingGLDoubleSided.png
     FAIL 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDoubleSided
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLExtents
@@ -579,8 +590,8 @@ pxr_register_test(testUsdImagingGLExtents
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLExtents
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLImplicits
@@ -590,8 +601,8 @@ pxr_register_test(testUsdImagingGLImplicits
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLImplicits
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLImplicits_refined
@@ -601,8 +612,8 @@ pxr_register_test(testUsdImagingGLImplicits_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLImplicits
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_simpleSphere
@@ -614,6 +625,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_simpleSphere
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_transformedSphere
@@ -625,6 +637,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_transformedSphere
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_intersectingSpheres
@@ -636,6 +649,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_intersectingSpheres
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_piSpheres
@@ -647,6 +661,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_piSpheres
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_niSpheres
@@ -658,6 +673,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_niSpheres
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_sphereInsideSphere
@@ -669,6 +685,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_sphereInsideSphere
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_backfaceCull
@@ -680,6 +697,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_backfaceCull
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_frontfaceCull
@@ -691,6 +709,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_frontfaceCull
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNativeImplicits_animatedSphere
@@ -704,6 +723,7 @@ pxr_register_test(testUsdImagingGLNativeImplicits_animatedSphere
     TESTENV testenv/testUsdImagingGLNativeImplicits
     ENV
         HDST_ENABLE_NATIVE_SPHERES=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLHoleFaces
@@ -713,8 +733,8 @@ pxr_register_test(testUsdImagingGLHoleFaces
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLHoleFaces
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivision_1_1
@@ -724,8 +744,8 @@ pxr_register_test(testUsdImagingGLSubdivision_1_1
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivision_1_2
@@ -735,8 +755,8 @@ pxr_register_test(testUsdImagingGLSubdivision_1_2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivision_1_3
@@ -746,8 +766,8 @@ pxr_register_test(testUsdImagingGLSubdivision_1_3
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivision_lefthanded_1_1
@@ -757,8 +777,8 @@ pxr_register_test(testUsdImagingGLSubdivision_lefthanded_1_1
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivision_lefthanded_1_2
@@ -768,8 +788,8 @@ pxr_register_test(testUsdImagingGLSubdivision_lefthanded_1_2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLComplexityOsd3
@@ -781,8 +801,8 @@ pxr_register_test(testUsdImagingGLComplexityOsd3
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLComplexityOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasisCurvesWithColor
@@ -795,8 +815,8 @@ pxr_register_test(testUsdImagingGLBasisCurvesWithColor
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasisCurvesWithColor
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasisCurvesWithScale
@@ -806,8 +826,8 @@ pxr_register_test(testUsdImagingGLBasisCurvesWithScale
     FAIL .05
     FAIL_PERCENT .08
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasisCurvesWithScale
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasisCurvesWithNormals
@@ -817,8 +837,8 @@ pxr_register_test(testUsdImagingGLBasisCurvesWithNormals
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasisCurvesWithNormals
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivisionSchemeNone
@@ -829,8 +849,8 @@ pxr_register_test(testUsdImagingGLSubdivisionSchemeNone
     FAIL 0.3
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionSchemeNone
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSubdivisionSchemeNone_NoLights
@@ -841,8 +861,8 @@ pxr_register_test(testUsdImagingGLSubdivisionSchemeNone_NoLights
     FAIL 0.2
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSubdivisionSchemeNone
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLVaryingTopology
@@ -854,8 +874,8 @@ pxr_register_test(testUsdImagingGLVaryingTopology
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLVaryingTopology
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLVaryingSharedMeshTopology
@@ -867,8 +887,8 @@ pxr_register_test(testUsdImagingGLVaryingSharedMeshTopology
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLVaryingSharedMeshTopology
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLEmptyMesh
@@ -881,8 +901,8 @@ pxr_register_test(testUsdImagingGLEmptyMesh
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLEmptyMesh
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLTetMesh
@@ -893,8 +913,8 @@ pxr_register_test(testUsdImagingGLTetMesh
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLTetMesh
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLTetMesh_SceneIndex
@@ -905,8 +925,8 @@ pxr_register_test(testUsdImagingGLTetMesh_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLTetMesh
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimitiveDrawing
@@ -916,8 +936,8 @@ pxr_register_test(testUsdImagingGLPrimitiveDrawing
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimitiveDrawing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLFlatShading
@@ -926,8 +946,8 @@ pxr_register_test(testUsdImagingGLFlatShading
         testUsdImagingGLFlatShading.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFlatShading
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLShadeMaterial
@@ -936,8 +956,8 @@ pxr_register_test(testUsdImagingGLShadeMaterial
         testUsdImagingGLShadeMaterial.png
     FAIL 0.3
     FAIL_PERCENT 0.9
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLShadeMaterial
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLShadeMaterial_Delegate
@@ -947,10 +967,10 @@ pxr_register_test(testUsdImagingGLShadeMaterial_Delegate
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLShadeMaterial_Delegate
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSphere
@@ -961,8 +981,8 @@ pxr_register_test(testUsdImagingGLSphere
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSphere
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSphere_transformed
@@ -972,8 +992,8 @@ pxr_register_test(testUsdImagingGLSphere_transformed
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSphere
+    LABELS "requires_gpu"
 )
 
 # There is a bug for sphere with float radius:
@@ -987,10 +1007,10 @@ pxr_register_test(testUsdImagingGLSphereWithFloatRadius
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSphere
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNurbsCurves
@@ -1002,8 +1022,8 @@ pxr_register_test(testUsdImagingGLNurbsCurves
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLNurbsCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNurbsCurves_refined
@@ -1015,8 +1035,8 @@ pxr_register_test(testUsdImagingGLNurbsCurves_refined
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLNurbsCurves
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNurbsPatch
@@ -1028,8 +1048,8 @@ pxr_register_test(testUsdImagingGLNurbsPatch
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLNurbsPatch
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLFramingBBox_proxy
@@ -1039,8 +1059,8 @@ pxr_register_test(testUsdImagingGLFramingBBox_proxy
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFramingBBox
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLFramingBBox_proxy_render
@@ -1050,8 +1070,8 @@ pxr_register_test(testUsdImagingGLFramingBBox_proxy_render
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFramingBBox
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_instancedCubes
@@ -1062,8 +1082,8 @@ pxr_register_test(testUsdImagingGLInstancing_instancedCubes
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_instancedCubes2
@@ -1074,8 +1094,8 @@ pxr_register_test(testUsdImagingGLInstancing_instancedCubes2
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_instancedCubes2NoInstancing
@@ -1086,8 +1106,8 @@ pxr_register_test(testUsdImagingGLInstancing_instancedCubes2NoInstancing
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_nestedInstancedCubes
@@ -1098,8 +1118,8 @@ pxr_register_test(testUsdImagingGLInstancing_nestedInstancedCubes
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_ni_pi
@@ -1110,8 +1130,8 @@ pxr_register_test(testUsdImagingGLInstancing_ni_pi
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_internal_ni
@@ -1122,8 +1142,8 @@ pxr_register_test(testUsdImagingGLInstancing_internal_ni
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_pi_ni_xform
@@ -1134,8 +1154,8 @@ pxr_register_test(testUsdImagingGLInstancing_pi_ni_xform
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instancedCubes
@@ -1146,8 +1166,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instancedCubes
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instancedCubes2
@@ -1158,8 +1178,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instancedCubes2
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instancedCubes2NoInstancing
@@ -1170,8 +1190,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instancedCubes2NoInstanc
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_nestedInstancedCubes
@@ -1182,8 +1202,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_nestedInstancedCubes
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_ni_pi
@@ -1194,8 +1214,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_ni_pi
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_internal_ni
@@ -1206,8 +1226,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_internal_ni
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_pi_ni_xform
@@ -1218,8 +1238,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_pi_ni_xform
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancing_SceneIndex_pi_outside
@@ -1228,8 +1248,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_pi_outside
         usd-12231/testUsdImagingGLInstancing_pi_outside.png
     FAIL 0.01
     FAIL_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancing
+    LABELS "requires_gpu"
 )
 
 
@@ -1241,8 +1261,8 @@ pxr_register_test(testUsdImagingGLInstancing_SceneIndex_pi_outside
 #        usd-12231/testUsdImagingGLInstancing_ni_pi_outside.png
 #    FAIL 0.01
 #    FAIL_PERCENT 0.01
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLInstancing
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLPickAndHighlight
@@ -1256,10 +1276,10 @@ pxr_register_test(testUsdImagingGLPickAndHighlight
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPickAndHighlight
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPickAndHighlight_SceneIndex
@@ -1273,10 +1293,10 @@ pxr_register_test(testUsdImagingGLPickAndHighlight_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPickAndHighlight
     ENV
         USD_IMAGING_GL_PICK_TEST_SKIP_INSTANCER_DETAILS=true
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancePicking_scene0
@@ -1289,6 +1309,7 @@ pxr_register_test(testUsdImagingGLInstancePicking_scene0
     DIFF_COMPARE
         pickhits_scene0.txt
     TESTENV testenv/testUsdImagingGLInstancePicking
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancePicking_scene1
@@ -1301,6 +1322,7 @@ pxr_register_test(testUsdImagingGLInstancePicking_scene1
     DIFF_COMPARE
         pickhits_scene1.txt
     TESTENV testenv/testUsdImagingGLInstancePicking
+    LABELS "requires_gpu"
 )
 
 # XXX 
@@ -1316,8 +1338,8 @@ pxr_register_test(testUsdImagingGLHighlight
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLHighlight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLHighlight_pi
@@ -1333,8 +1355,8 @@ pxr_register_test(testUsdImagingGLHighlight_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLHighlight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLHighlight_pi_ni
@@ -1364,8 +1386,8 @@ pxr_register_test(testUsdImagingGLHighlight_pi_ni
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLHighlight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLHighlight_ni_ni_ni
@@ -1386,8 +1408,8 @@ pxr_register_test(testUsdImagingGLHighlight_ni_ni_ni
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLHighlight
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSurfaceShader_1_2_5
@@ -1399,8 +1421,8 @@ pxr_register_test(testUsdImagingGLSurfaceShader_1_2_5
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSurfaceShader
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSurfaceShader_3_4
@@ -1412,8 +1434,8 @@ pxr_register_test(testUsdImagingGLSurfaceShader_3_4
     FAIL_PERCENT 0.001
     WARN 0.02
     WARN_PERCENT 0.0005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSurfaceShader
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLShadeBadTexture
@@ -1427,8 +1449,8 @@ pxr_register_test(testUsdImagingGLShadeBadTexture
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLShadeBadTexture
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLShadeBool
@@ -1442,8 +1464,8 @@ pxr_register_test(testUsdImagingGLShadeBool
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLShadeBool
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_basic
@@ -1454,8 +1476,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_basic
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi
@@ -1465,8 +1487,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_pi
@@ -1476,8 +1498,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_which_rot
@@ -1487,8 +1509,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_which_rot
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_pi2
@@ -1498,8 +1520,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_pi2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_ni_pi
@@ -1509,8 +1531,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_ni_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_ni
@@ -1520,8 +1542,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_ni
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_ni2
@@ -1531,8 +1553,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_ni2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_ni_pi
@@ -1542,8 +1564,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_ni_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_root_prototype
@@ -1553,8 +1575,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_root_prototype
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_sibling_prototype
@@ -1564,8 +1586,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_sibling_prototype
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_sibling_pi
@@ -1575,8 +1597,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_sibling_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_sibling_pi_over
@@ -1586,8 +1608,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_sibling_pi_over
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_varying
@@ -1623,8 +1645,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_varying
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_varying
@@ -1651,8 +1673,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_varying
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_time
@@ -1662,8 +1684,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_time
         pi_pi_time_001.png
     FAIL .05
     FAIL_PERCENT .03
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_masking
@@ -1677,8 +1699,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_masking
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_bad_schema_input
@@ -1688,8 +1710,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_bad_schema_input
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_ni_material
@@ -1699,8 +1721,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_ni_material
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_ni_material2
@@ -1710,8 +1732,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_ni_material2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_basic
@@ -1722,8 +1744,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_basic
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi
@@ -1733,8 +1755,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi
@@ -1744,8 +1766,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi_which_rot
@@ -1755,8 +1777,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi_which_rot
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi2
@@ -1766,8 +1788,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_ni_pi
@@ -1777,8 +1799,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_ni_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni
@@ -1788,8 +1810,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni2
@@ -1799,8 +1821,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni_pi
@@ -1810,8 +1832,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_root_prototype
@@ -1821,8 +1843,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_root_prototype
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_prototype
@@ -1832,8 +1854,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_prototype
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_pi
@@ -1843,8 +1865,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_pi
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_pi_over
@@ -1854,8 +1876,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_pi_over
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 # UsdImagingPiPrototypePropagtingSceneIndex does not support yet some visibility aspects.
@@ -1892,8 +1914,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_sibling_pi_over
 #    FAIL .05
 #    FAIL_PERCENT .03
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLPointInstancer
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi_varying
@@ -1920,8 +1942,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi_varying
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_varyingf
@@ -1948,8 +1970,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_pi_pi_varyingf
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi_time
@@ -1959,8 +1981,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_pi_time
         pi_pi_time_001.png
     FAIL .05
     FAIL_PERCENT .03
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_masking
@@ -1974,8 +1996,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_masking
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 # UsdImagingPiPrototypePropagatingSceneIndex does not yet implement
@@ -1987,8 +2009,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_masking
 #    FAIL 1
 #    FAIL_PERCENT 1
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLPointInstancer
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni_material
@@ -1998,8 +2020,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni_material
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni_material2
@@ -2009,8 +2031,8 @@ pxr_register_test(testUsdImagingGLPointInstancer_SceneIndex_pi_ni_material2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPointInstancer
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLResync
@@ -2021,8 +2043,8 @@ pxr_register_test(testUsdImagingGLResync
         world_2.png
     FAIL .05
     FAIL_PERCENT .03
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLResync
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLResync_instancer
@@ -2033,8 +2055,8 @@ pxr_register_test(testUsdImagingGLResync_instancer
         instancer_2.png
     FAIL .05
     FAIL_PERCENT .03
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLResync
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSublayerOperations
@@ -2047,8 +2069,8 @@ pxr_register_test(testUsdImagingGLSublayerOperations
         add_sublayer_with_sub.png
     FAIL .05
     FAIL_PERCENT .03
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSublayerOperations
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPurpose
@@ -2061,8 +2083,8 @@ pxr_register_test(testUsdImagingGLPurpose
     FAIL .1
     FAIL_PERCENT 10
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPurpose
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimvarSharing
@@ -2074,10 +2096,10 @@ pxr_register_test(testUsdImagingGLPrimvarSharing
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarSharing
     ENV
         HDST_ENABLE_SHARED_VERTEX_PRIMVAR=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimvarSharing_refined
@@ -2088,10 +2110,10 @@ pxr_register_test(testUsdImagingGLPrimvarSharing_refined
         refined_002.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarSharing
     ENV
         HDST_ENABLE_SHARED_VERTEX_PRIMVAR=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimvarSharing_colors
@@ -2103,10 +2125,10 @@ pxr_register_test(testUsdImagingGLPrimvarSharing_colors
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarSharing
     ENV
         HDST_ENABLE_SHARED_VERTEX_PRIMVAR=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimvarSharing_refined_colors
@@ -2118,10 +2140,10 @@ pxr_register_test(testUsdImagingGLPrimvarSharing_refined_colors
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarSharing
     ENV
         HDST_ENABLE_SHARED_VERTEX_PRIMVAR=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLColorOpacityPrimvar
@@ -2132,10 +2154,10 @@ pxr_register_test(testUsdImagingGLColorOpacityPrimvar
     FAIL 0.1
     FAIL_PERCENT 0.15
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLColorOpacityPrimvar
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLTriangleSubdivisionRuleOsd3
@@ -2145,8 +2167,8 @@ pxr_register_test(testUsdImagingGLTriangleSubdivisionRuleOsd3
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLTriangleSubdivisionRuleOsd3
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLWireframeOpacity
@@ -2156,8 +2178,8 @@ pxr_register_test(testUsdImagingGLWireframeOpacity
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLWireframeOpacity
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards
@@ -2168,10 +2190,10 @@ pxr_register_test(testUsdImagingGLCards
     FAIL_PERCENT 0.2
     WARN 0.02
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards_anim
@@ -2183,10 +2205,10 @@ pxr_register_test(testUsdImagingGLCards_anim
     FAIL_PERCENT 0.2
     WARN 0.03
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards_bounds
@@ -2197,10 +2219,10 @@ pxr_register_test(testUsdImagingGLCards_bounds
     FAIL_PERCENT 0.1
     WARN 0.02
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards_basic
@@ -2211,10 +2233,10 @@ pxr_register_test(testUsdImagingGLCards_basic
     FAIL_PERCENT 0.1
     WARN 0.2
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 # XXX: Commenting out while failures are being investigated.
@@ -2227,9 +2249,9 @@ pxr_register_test(testUsdImagingGLCards_basic
 #     FAIL_PERCENT 0.1
 #     WARN 0.02
 #     WARN_PERCENT 0.05
-#     EXPECTED_RETURN_CODE 0
 #     TESTENV testenv/testUsdImagingGLCards
-# )
+#     LABELS "requires_gpu"
+#)
 
 pxr_register_test(testUsdImagingGLCards_SceneIndex_anim
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLBasicDrawing -offscreen -lighting -shading smooth -frameAll -stage testAnim.usda -times 1 2 -write testAnim.png"
@@ -2240,8 +2262,8 @@ pxr_register_test(testUsdImagingGLCards_SceneIndex_anim
     FAIL_PERCENT 0.1
     WARN 0.02
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards_SceneIndex_bounds
@@ -2252,8 +2274,8 @@ pxr_register_test(testUsdImagingGLCards_SceneIndex_bounds
     FAIL_PERCENT 0.1
     WARN 0.02
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards_SceneIndex_basic
@@ -2264,8 +2286,8 @@ pxr_register_test(testUsdImagingGLCards_SceneIndex_basic
     FAIL_PERCENT 0.1
     WARN 0.2
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCards_SceneIndex_visibility
@@ -2276,8 +2298,8 @@ pxr_register_test(testUsdImagingGLCards_SceneIndex_visibility
     FAIL_PERCENT 0.1
     WARN 0.2
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCards
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLMeshQuadrangulation
@@ -2287,10 +2309,10 @@ pxr_register_test(testUsdImagingGLMeshQuadrangulation
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLMeshQuadrangulation
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLMeshQuadrangulation_refined
@@ -2300,10 +2322,10 @@ pxr_register_test(testUsdImagingGLMeshQuadrangulation_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLMeshQuadrangulation
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSkeleton
@@ -2315,8 +2337,8 @@ pxr_register_test(testUsdImagingGLSkeleton
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSkeleton
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSkelBlendShapes
@@ -2328,8 +2350,8 @@ pxr_register_test(testUsdImagingGLSkelBlendShapes
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSkelBlendShapes
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNormals
@@ -2338,8 +2360,8 @@ pxr_register_test(testUsdImagingGLNormals
         testNormals.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLNormals
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_Fallback
@@ -2350,10 +2372,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Fallback
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2365,10 +2387,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Primvars
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2380,10 +2402,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_PrimvarReaderOpacity
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2395,10 +2417,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Specular
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2410,10 +2432,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_MaterialInterface
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2425,10 +2447,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Texture
     FAIL_PERCENT 0.02
     WARN 0.05
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2440,10 +2462,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Translucent
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2455,10 +2477,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Displacement
     FAIL_PERCENT 0.5
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2470,10 +2492,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_TextureOpacity
     FAIL_PERCENT 0.1
     WARN 0.025
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2485,10 +2507,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_TextureScaleAndBias
     FAIL_PERCENT 0.03
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2500,10 +2522,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Transform2d
     FAIL_PERCENT 0.02
     WARN 0.05
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2515,10 +2537,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_SourceColorSpace
     FAIL_PERCENT 0.025
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2530,10 +2552,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_NormalMap
     FAIL_PERCENT 0.12
     WARN 0.02
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -2545,10 +2567,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_OpacityThreshold
     FAIL_PERCENT 0.02
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_Animated
@@ -2562,10 +2584,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_Animated
     FAIL_PERCENT 0.02
     WARN 0.05
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_FallbackPrimvar
@@ -2576,10 +2598,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_FallbackPrimvar
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_FallbackTexture
@@ -2590,10 +2612,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_FallbackTexture
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_PrimvarFallback
@@ -2604,10 +2626,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_PrimvarFallback
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_TextureFallback
@@ -2618,10 +2640,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_TextureFallback
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_TextureNoFile
@@ -2632,10 +2654,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_TextureNoFile
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_TextureWithToken
@@ -2646,10 +2668,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_TextureWithToken
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_OpacityModeTransparent
@@ -2660,10 +2682,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_OpacityModeTransparent
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_OpacityModePresence
@@ -2674,10 +2696,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_OpacityModePresence
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurface_DomeLight
@@ -2688,10 +2710,10 @@ pxr_register_test(testUsdImagingGLPreviewSurface_DomeLight
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Fallback
@@ -2702,10 +2724,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Fallback
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2717,10 +2739,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Primvars
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2732,10 +2754,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Specular
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2747,10 +2769,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_MaterialInterface
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2762,10 +2784,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Texture
     FAIL_PERCENT 0.02
     WARN 0.05
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2777,10 +2799,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Translucent
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2792,10 +2814,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Displacement
     FAIL_PERCENT 0.5
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2807,10 +2829,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_TextureOpacity
     FAIL_PERCENT 0.1
     WARN 0.025
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2822,10 +2844,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_TextureScaleAndBias
     FAIL_PERCENT 0.03
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2837,10 +2859,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Transform2d
     FAIL_PERCENT 0.02
     WARN 0.05
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2852,10 +2874,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_SourceColorSpace
     FAIL_PERCENT 0.025
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2867,10 +2889,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_NormalMap
     FAIL_PERCENT 0.12
     WARN 0.02
     WARN_PERCENT 0.05
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2882,10 +2904,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_OpacityThreshold
     FAIL_PERCENT 0.02
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2900,10 +2922,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_Animated
     FAIL_PERCENT 0.02
     WARN 0.05
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2915,10 +2937,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_FallbackPrimvar
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2930,10 +2952,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_FallbackTexture
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2945,10 +2967,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_PrimvarFallback
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2960,10 +2982,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_TextureFallback
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2975,10 +2997,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_TextureNoFile
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 
@@ -2990,10 +3012,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_TextureWithToken
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_OpacityModeTransparent
@@ -3004,10 +3026,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_OpacityModeTranspare
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_OpacityModePresence
@@ -3018,10 +3040,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_OpacityModePresence
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_DomeLight
@@ -3032,10 +3054,10 @@ pxr_register_test(testUsdImagingGLPreviewSurfaceNonBindless_DomeLight
     FAIL_PERCENT 0.01
     WARN 0.01
     WARN_PERCENT 0.005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPreviewSurface
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPremultiplyAlpha
@@ -3046,8 +3068,8 @@ pxr_register_test(testUsdImagingGLPremultiplyAlpha
     FAIL_PERCENT 0.75
     WARN 0.01
     WARN_PERCENT 0.72
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPremultiplyAlpha
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPremultiplyAlpha_udims
@@ -3058,8 +3080,8 @@ pxr_register_test(testUsdImagingGLPremultiplyAlpha_udims
     FAIL_PERCENT 0.75
     WARN 0.01
     WARN_PERCENT 0.66
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPremultiplyAlpha
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_2instances
@@ -3070,8 +3092,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_2instances
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 
@@ -3083,8 +3105,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_2instances_per_inst
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 
@@ -3096,8 +3118,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_2instances_shaded
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 
@@ -3109,8 +3131,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_2instances_shaded_o
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_ni_material_outside_prototype
@@ -3121,8 +3143,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_ni_ni_material_outside
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_2instances
@@ -3133,8 +3155,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_2instanc
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 
@@ -3146,8 +3168,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_2instanc
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 
@@ -3159,8 +3181,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_2instanc
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 
@@ -3172,8 +3194,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_2instanc
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_ni_material_outside_prototype
@@ -3184,8 +3206,8 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_ni_mater
     FAIL_PERCENT 0.005
     WARN 0.02
     WARN_PERCENT 0.0025
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
+    LABELS "requires_gpu"
 )
 
 # Disabled because of a bug in usdImaging 2.0.
@@ -3198,9 +3220,9 @@ pxr_register_test(testUsdImagingGLInstancingWithMaterials_SceneIndex_ni_ni_mater
 #     FAIL_PERCENT 0.005
 #     WARN 0.02
 #     WARN_PERCENT 0.0025
-#     EXPECTED_RETURN_CODE 0
 #     TESTENV testenv/testUsdImagingGLInstancingWithMaterials
-# )
+#     LABELS "requires_gpu"
+#)
 
 pxr_register_test(testUsdImagingGLFaceVarying_Uniform_Low
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLBasicDrawing -complexity 1.1 -offscreen -lighting -camlight -shading wireOnSurface -frameAll -stage testUsdImagingGLFaceVarying.usda -write testUsdImagingGLFaceVarying_Uniform_Low.png"
@@ -3209,8 +3231,8 @@ pxr_register_test(testUsdImagingGLFaceVarying_Uniform_Low
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
+    LABELS "requires_gpu"
 )
 
 
@@ -3221,8 +3243,8 @@ pxr_register_test(testUsdImagingGLFaceVarying_Uniform_Medium
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
+    LABELS "requires_gpu"
 )
 
 
@@ -3233,8 +3255,8 @@ pxr_register_test(testUsdImagingGLFaceVaryingLinearInterp_Uniform_Low
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
+    LABELS "requires_gpu"
 )
 
 
@@ -3245,8 +3267,8 @@ pxr_register_test(testUsdImagingGLFaceVaryingLinearInterp_Uniform_Medium
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
+    LABELS "requires_gpu"
 )
 
 
@@ -3257,8 +3279,8 @@ pxr_register_test(testUsdImagingGLFaceVaryingLeftHanded_Uniform_None
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
+    LABELS "requires_gpu"
 )
 
 
@@ -3269,8 +3291,8 @@ pxr_register_test(testUsdImagingGLFaceVaryingLeftHanded_Uniform_Low
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLFaceVarying_Adaptive_Low
@@ -3280,10 +3302,10 @@ pxr_register_test(testUsdImagingGLFaceVarying_Adaptive_Low
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -3294,10 +3316,10 @@ pxr_register_test(testUsdImagingGLFaceVarying_Adaptive_Medium
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -3308,10 +3330,10 @@ pxr_register_test(testUsdImagingGLFaceVaryingLinearInterp_Adaptive_Low
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -3322,10 +3344,10 @@ pxr_register_test(testUsdImagingGLFaceVaryingLinearInterp_Adaptive_Medium
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -3336,10 +3358,10 @@ pxr_register_test(testUsdImagingGLFaceVaryingLeftHanded_Adaptive_Low
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFaceVarying
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLShadingPrimvars
@@ -3349,10 +3371,10 @@ pxr_register_test(testUsdImagingGLShadingPrimvars
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLShadingPrimvars
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 # The following tests are disabled since the stages are unable to load any .tx files
@@ -3366,10 +3388,10 @@ pxr_register_test(testUsdImagingGLShadingPrimvars
 #    FAIL 1
 #    FAIL_PERCENT 1
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLTextureWrap
 #    ENV
 #        HGIGL_ENABLE_BINDLESS_TEXTURE=1
+#    LABELS "requires_gpu"
 #)
 #
 #pxr_register_test(testUsdImagingGLTextureWrapNonBindless
@@ -3379,10 +3401,10 @@ pxr_register_test(testUsdImagingGLShadingPrimvars
 #    FAIL 1
 #    FAIL_PERCENT 1
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLTextureWrap
 #    ENV
 #        HGIGL_ENABLE_BINDLESS_TEXTURE=0
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLUsdLux
@@ -3391,8 +3413,8 @@ pxr_register_test(testUsdImagingGLUsdLux
         usdLux.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdLux
+    LABELS "requires_gpu"
 )
 
 # TODO: Requires create_symlinks.py to run properly
@@ -3402,10 +3424,10 @@ pxr_register_test(testUsdImagingGLUsdLux
 #        usdUdimsSymlinked.png
 #    FAIL_PERCENT 1
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLUsdUdims
 #    ENV
 #        HGIGL_ENABLE_BINDLESS_TEXTURE=1
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLUsdUdims
@@ -3415,10 +3437,10 @@ pxr_register_test(testUsdImagingGLUsdUdims
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_Usdz
@@ -3428,10 +3450,10 @@ pxr_register_test(testUsdImagingGLUsdUdims_Usdz
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_ScaleAndBias
@@ -3441,10 +3463,10 @@ pxr_register_test(testUsdImagingGLUsdUdims_ScaleAndBias
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_TextureFallback
@@ -3454,10 +3476,10 @@ pxr_register_test(testUsdImagingGLUsdUdims_TextureFallback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_DifferentDir
@@ -3467,10 +3489,10 @@ pxr_register_test(testUsdImagingGLUsdUdims_DifferentDir
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
+    LABELS "requires_gpu"
 )
 
 # TODO: Requires create_symlinks.py to run properly
@@ -3480,10 +3502,10 @@ pxr_register_test(testUsdImagingGLUsdUdims_DifferentDir
 #        usdUdimsSymlinked.png
 #    FAIL_PERCENT 1
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLUsdUdimsNonBindless
 #    ENV
 #        HGIGL_ENABLE_BINDLESS_TEXTURE=0
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLUsdUdims_SceneIndex
@@ -3493,11 +3515,11 @@ pxr_register_test(testUsdImagingGLUsdUdims_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
         USDIMAGGINGGL_ENGINE_ENABLE_SCENE_INDEX=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_Usdz_SceneIndex
@@ -3507,11 +3529,11 @@ pxr_register_test(testUsdImagingGLUsdUdims_Usdz_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
         USDIMAGGINGGL_ENGINE_ENABLE_SCENE_INDEX=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_ScaleAndBias_SceneIndex
@@ -3521,11 +3543,11 @@ pxr_register_test(testUsdImagingGLUsdUdims_ScaleAndBias_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
         USDIMAGGINGGL_ENGINE_ENABLE_SCENE_INDEX=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_TextureFallback_SceneIndex
@@ -3535,11 +3557,11 @@ pxr_register_test(testUsdImagingGLUsdUdims_TextureFallback_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
         USDIMAGGINGGL_ENGINE_ENABLE_SCENE_INDEX=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdims_DifferentDir_SceneIndex
@@ -3549,11 +3571,11 @@ pxr_register_test(testUsdImagingGLUsdUdims_DifferentDir_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=1
         USDIMAGGINGGL_ENGINE_ENABLE_SCENE_INDEX=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdimsNonBindless
@@ -3563,10 +3585,10 @@ pxr_register_test(testUsdImagingGLUsdUdimsNonBindless
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdimsNonBindless_ScaleAndBias
@@ -3576,10 +3598,10 @@ pxr_register_test(testUsdImagingGLUsdUdimsNonBindless_ScaleAndBias
     FAIL 1
     FAIL_PERCENT 1.5
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdimsNonBindless_TextureFallback
@@ -3589,10 +3611,10 @@ pxr_register_test(testUsdImagingGLUsdUdimsNonBindless_TextureFallback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdUdimsNonBindless_DifferentDir
@@ -3602,10 +3624,10 @@ pxr_register_test(testUsdImagingGLUsdUdimsNonBindless_DifferentDir
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdUdims
     ENV
         HGIGL_ENABLE_BINDLESS_TEXTURE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdSkelExtCompCPU_arm_baked
@@ -3616,10 +3638,10 @@ pxr_register_test(testUsdImagingGLUsdSkelExtCompCPU_arm_baked
         usdSkel_arm_baked_007.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdSkel
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdSkelExtCompCPU_arm
@@ -3630,10 +3652,10 @@ pxr_register_test(testUsdImagingGLUsdSkelExtCompCPU_arm
         usdSkel_arm_extComp_CPU_007.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdSkel
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdSkelExtCompCPU_twoBends
@@ -3642,10 +3664,10 @@ pxr_register_test(testUsdImagingGLUsdSkelExtCompCPU_twoBends
         usdSkel_twoBends_extComp_CPU.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdSkel
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdSkelExtCompGPU_arm_baked
@@ -3656,10 +3678,10 @@ pxr_register_test(testUsdImagingGLUsdSkelExtCompGPU_arm_baked
         usdSkel_arm_baked_007.png
     FAIL 0.1
     FAIL_PERCENT 1
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdSkel
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdSkelExtCompGPU_arm
@@ -3671,10 +3693,10 @@ pxr_register_test(testUsdImagingGLUsdSkelExtCompGPU_arm
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdSkel
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLUsdSkelExtCompGPU_twoBends
@@ -3684,10 +3706,10 @@ pxr_register_test(testUsdImagingGLUsdSkelExtCompGPU_twoBends
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLUsdSkel
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=0
+    LABELS "requires_gpu"
 )
 
 if (PXR_ENABLE_GL_SUPPORT AND X11_FOUND)
@@ -3706,10 +3728,10 @@ if (PXR_ENABLE_GL_SUPPORT AND X11_FOUND)
         FAIL .05
         FAIL_PERCENT .03
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLPopOut
         ENV
             HGI_ENABLE_VULKAN=0
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLPopOut_instance
@@ -3727,18 +3749,18 @@ if (PXR_ENABLE_GL_SUPPORT AND X11_FOUND)
         FAIL .05
         FAIL_PERCENT .03
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLPopOut
         ENV
             HGI_ENABLE_VULKAN=0
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLPopOut_instance_empty
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLPopOut --output test_instance_empty test_instance_empty.usda"
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLPopOut
         ENV
             HGI_ENABLE_VULKAN=0
+        LABELS "requires_gpu"
     )
 endif()
 
@@ -3749,8 +3771,8 @@ pxr_register_test(testUsdImagingGLMaterialTag
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLMaterialTag
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLMaterialStrengthOrder
@@ -3762,9 +3784,9 @@ pxr_register_test(testUsdImagingGLMaterialStrengthOrder
     WARN 0.01
     WARN_PERCENT 0.0075
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLMaterialStrengthOrder
     # The UsdImagingDelegate did not apply the material override to native instances.
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancePrimvars
@@ -3774,8 +3796,8 @@ pxr_register_test(testUsdImagingGLInstancePrimvars
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancePrimvars
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancePrimvars_Filtering
@@ -3785,8 +3807,8 @@ pxr_register_test(testUsdImagingGLInstancePrimvars_Filtering
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancePrimvars
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInstancePrimvars_Animated
@@ -3798,8 +3820,8 @@ pxr_register_test(testUsdImagingGLInstancePrimvars_Animated
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInstancePrimvars
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSimpleVolumes
@@ -3809,8 +3831,8 @@ pxr_register_test(testUsdImagingGLSimpleVolumes
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSimpleVolumes
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSimpleVolumes_Glow
@@ -3820,8 +3842,8 @@ pxr_register_test(testUsdImagingGLSimpleVolumes_Glow
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSimpleVolumes
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLVolumeMaterial
@@ -3831,8 +3853,8 @@ pxr_register_test(testUsdImagingGLVolumeMaterial
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLVolumeMaterial
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLBasisCurvesVaryingTopology
@@ -3844,8 +3866,8 @@ pxr_register_test(testUsdImagingGLBasisCurvesVaryingTopology
     FAIL .05
     FAIL_PERCENT .03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLBasisCurvesVaryingTopology
+    LABELS "requires_gpu"
 )
 
 # Disable this test temporarily due to issue where test runs forever
@@ -3858,8 +3880,8 @@ pxr_register_test(testUsdImagingGLClippingPlanes
     FAIL_PERCENT 0.02
     WARN 0.02
     WARN_PERCENT 0.01
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLClippingPlanes
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLAnimatedCamera
@@ -3871,8 +3893,8 @@ pxr_register_test(testUsdImagingGLAnimatedCamera
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLAnimatedCamera
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLCameraExposure
@@ -3884,8 +3906,8 @@ pxr_register_test(testUsdImagingGLCameraExposure
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLCameraExposure
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLAnimatedLights
@@ -3897,8 +3919,8 @@ pxr_register_test(testUsdImagingGLAnimatedLights
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLAnimatedLights
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSdr_1
@@ -3908,8 +3930,8 @@ pxr_register_test(testUsdImagingGLSdr_1
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSdr
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLSdr_2
@@ -3919,8 +3941,8 @@ pxr_register_test(testUsdImagingGLSdr_2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLSdr
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInvalidInfoId
@@ -3930,8 +3952,8 @@ pxr_register_test(testUsdImagingGLInvalidInfoId
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInvalidInfoId
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInheritedPurpose_none
@@ -3940,8 +3962,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_none
         testUsdImagingGLInheritedPurpose_none.png
     FAIL 0.1
     FAIL_PERCENT 0.2
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -3951,8 +3973,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_guides
         testUsdImagingGLInheritedPurpose_guides.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -3962,8 +3984,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_render
         testUsdImagingGLInheritedPurpose_render.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -3973,8 +3995,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_proxy
         testUsdImagingGLInheritedPurpose_proxy.png
     FAIL 0.1
     FAIL_PERCENT 0.35
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -3984,8 +4006,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_all
         testUsdImagingGLInheritedPurpose_all.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 # NOTE: These 3 tests pass if we allow the perceptual test to pass if we bump up
@@ -3997,8 +4019,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_Instanced_none
         testUsdImagingGLInheritedPurpose_none.png
     FAIL 0.1
     FAIL_PERCENT 0.2
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -4008,8 +4030,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_Instanced_guides
         testUsdImagingGLInheritedPurpose_guides.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -4019,8 +4041,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_Instanced_render
         testUsdImagingGLInheritedPurpose_render.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -4030,8 +4052,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_Instanced_proxy
         testUsdImagingGLInheritedPurpose_proxy.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 
@@ -4041,8 +4063,8 @@ pxr_register_test(testUsdImagingGLInheritedPurpose_Instanced_all
         testUsdImagingGLInheritedPurpose_all.png
     FAIL 0.1
     FAIL_PERCENT 0.4
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInheritedPurpose
+    LABELS "requires_gpu"
 )
 
 # Note that in the UsdImagingDelegate, the displayColor authored on a material is stronger than the one authored as primvar on a prim using that material.
@@ -4053,10 +4075,10 @@ pxr_register_test(testUsdImagingGLInvalidUniversalSurface
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInvalidUniversalSurface
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 # Note that in the stage scene index, the displayColor authored on a material is ignored if there is a displayColor primvar authored on the prim using that material.
@@ -4067,8 +4089,8 @@ pxr_register_test(testUsdImagingGLInvalidUniversalSurface_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInvalidUniversalSurface
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLNoFallbacks
@@ -4078,8 +4100,8 @@ pxr_register_test(testUsdImagingGLNoFallbacks
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFallbackPrimTypes
+    LABELS "requires_gpu"
 )
 
 
@@ -4090,8 +4112,8 @@ pxr_register_test(testUsdImagingGLFallbacks_1
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFallbackPrimTypes
+    LABELS "requires_gpu"
 )
 
 
@@ -4102,8 +4124,8 @@ pxr_register_test(testUsdImagingGLFallbacks_2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFallbackPrimTypes
+    LABELS "requires_gpu"
 )
 
 
@@ -4114,8 +4136,8 @@ pxr_register_test(testUsdImagingGLFallbacks_3
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFallbackPrimTypes
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimvarProcessing
@@ -4128,8 +4150,8 @@ pxr_register_test(testUsdImagingGLPrimvarProcessing
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarProcessing
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLComposite
@@ -4141,8 +4163,8 @@ pxr_register_test(testUsdImagingGLComposite
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLComposite
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPresentDisabled
@@ -4152,8 +4174,8 @@ pxr_register_test(testUsdImagingGLPresentDisabled
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPresentDisabled
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLFraming_1
@@ -4164,8 +4186,8 @@ pxr_register_test(testUsdImagingGLFraming_1
     FAIL_PERCENT 0.04
     WARN 0.02
     WARN_PERCENT 0.02
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFraming
+    LABELS "requires_gpu"
 )
 
 
@@ -4177,8 +4199,8 @@ pxr_register_test(testUsdImagingGLFraming_2
     FAIL_PERCENT 0.04
     WARN 0.02
     WARN_PERCENT 0.02
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFraming
+    LABELS "requires_gpu"
 )
 
 
@@ -4190,8 +4212,8 @@ pxr_register_test(testUsdImagingGLFraming_3
     FAIL_PERCENT 0.04
     WARN 0.02
     WARN_PERCENT 0.02
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFraming
+    LABELS "requires_gpu"
 )
 
 
@@ -4203,8 +4225,8 @@ pxr_register_test(testUsdImagingGLFraming_4
     FAIL_PERCENT 0.04
     WARN 0.02
     WARN_PERCENT 0.02
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFraming
+    LABELS "requires_gpu"
 )
 
 
@@ -4216,8 +4238,8 @@ pxr_register_test(testUsdImagingGLFraming_5
     FAIL_PERCENT 0.04
     WARN 0.02
     WARN_PERCENT 0.02
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFraming
+    LABELS "requires_gpu"
 )
 
 
@@ -4229,8 +4251,8 @@ pxr_register_test(testUsdImagingGLFraming_6
     FAIL_PERCENT 0.04
     WARN 0.02
     WARN_PERCENT 0.02
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLFraming
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLHWFaceCulling
@@ -4244,8 +4266,8 @@ pxr_register_test(testUsdImagingGLHWFaceCulling
     FAIL_PERCENT 0.001
     WARN 0.05
     WARN_PERCENT 0.0005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLHWFaceCulling
+    LABELS "requires_gpu"
 )
 
 # The following test is disabled since the stages are unable to load any .tx files
@@ -4264,8 +4286,8 @@ pxr_register_test(testUsdImagingGLHWFaceCulling
 #    FAIL_PERCENT 0.001
 #    WARN 0.025
 #    WARN_PERCENT 0.002
-#    EXPECTED_RETURN_CODE 0
 #    TESTENV testenv/testUsdImagingGLMipmap
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdImagingGLPrimvarRefinement_Uniform_Low
@@ -4275,8 +4297,8 @@ pxr_register_test(testUsdImagingGLPrimvarRefinement_Uniform_Low
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarRefinement
+    LABELS "requires_gpu"
 )
 
 
@@ -4287,8 +4309,8 @@ pxr_register_test(testUsdImagingGLPrimvarRefinement_Uniform_Medium
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarRefinement
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDisplacement_uniform_veryhigh_vertex
@@ -4298,8 +4320,8 @@ pxr_register_test(testUsdImagingGLDisplacement_uniform_veryhigh_vertex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDisplacement
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDisplacement_uniform_veryhigh_varying
@@ -4309,8 +4331,8 @@ pxr_register_test(testUsdImagingGLDisplacement_uniform_veryhigh_varying
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDisplacement
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDisplacement_uniform_veryhigh_faceVarying
@@ -4320,8 +4342,8 @@ pxr_register_test(testUsdImagingGLDisplacement_uniform_veryhigh_faceVarying
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDisplacement
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLPrimvarRefinement_Adaptive_Low
@@ -4331,10 +4353,10 @@ pxr_register_test(testUsdImagingGLPrimvarRefinement_Adaptive_Low
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarRefinement
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -4345,10 +4367,10 @@ pxr_register_test(testUsdImagingGLPrimvarRefinement_Adaptive_Medium
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLPrimvarRefinement
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDisplacement_adaptive_veryhigh_vertex
@@ -4358,10 +4380,10 @@ pxr_register_test(testUsdImagingGLDisplacement_adaptive_veryhigh_vertex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDisplacement
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDisplacement_adaptive_veryhigh_varying
@@ -4371,10 +4393,10 @@ pxr_register_test(testUsdImagingGLDisplacement_adaptive_veryhigh_varying
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDisplacement
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDisplacement_adaptive_veryhigh_faceVarying
@@ -4384,10 +4406,10 @@ pxr_register_test(testUsdImagingGLDisplacement_adaptive_veryhigh_faceVarying
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLDisplacement
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLGeomSubsets_Low
@@ -4397,8 +4419,8 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Low
     FAIL 1
     FAIL_PERCENT 2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
+    LABELS "requires_gpu"
 )
 
 
@@ -4409,8 +4431,8 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Medium
     FAIL 1
     FAIL_PERCENT 2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLGeomSubsets_Points
@@ -4420,8 +4442,8 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Points
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLGeomSubsets_Quadrangulated
@@ -4431,10 +4453,10 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Quadrangulated
     FAIL 1
     FAIL_PERCENT 2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -4445,10 +4467,10 @@ pxr_register_test(testUsdImagingGLGeomSubsets_QuadrangulatedPoints
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLGeomSubsets_Low_SceneIndex
@@ -4458,8 +4480,8 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Low_SceneIndex
     FAIL 1
     FAIL_PERCENT 2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
+    LABELS "requires_gpu"
 )
 
 
@@ -4470,8 +4492,8 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Medium_SceneIndex
     FAIL 1
     FAIL_PERCENT 2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLGeomSubsets_Points_SceneIndex
@@ -4481,8 +4503,8 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Points_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLGeomSubsets_Quadrangulated_SceneIndex
@@ -4492,10 +4514,10 @@ pxr_register_test(testUsdImagingGLGeomSubsets_Quadrangulated_SceneIndex
     FAIL 1
     FAIL_PERCENT 2
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
+    LABELS "requires_gpu"
 )
 
 
@@ -4506,10 +4528,10 @@ pxr_register_test(testUsdImagingGLGeomSubsets_QuadrangulatedPoints_SceneIndex
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLGeomSubsets
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLAovVisualization_Storm_depth
@@ -4520,8 +4542,8 @@ pxr_register_test(testUsdImagingGLAovVisualization_Storm_depth
     FAIL_PERCENT 0.001
     WARN 0.025
     WARN_PERCENT 0.002
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLAovVisualization
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLAovVisualization_Storm_primId
@@ -4532,8 +4554,8 @@ pxr_register_test(testUsdImagingGLAovVisualization_Storm_primId
     FAIL_PERCENT 0.6
     WARN 0.025
     WARN_PERCENT 0.002
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLAovVisualization
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLAovVisualization_Storm_Neye
@@ -4544,8 +4566,8 @@ pxr_register_test(testUsdImagingGLAovVisualization_Storm_Neye
     FAIL_PERCENT 0.02
     WARN 0.025
     WARN_PERCENT 0.002
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLAovVisualization
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLInvalidMaterial
@@ -4555,10 +4577,10 @@ pxr_register_test(testUsdImagingGLInvalidMaterial
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLInvalidMaterial
     ENV
         HDST_ENABLE_BROKEN_SHADER_VISUAL_FEEDBACK=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLDomeLightTaskController
@@ -4569,6 +4591,7 @@ pxr_register_test(testUsdImagingGLDomeLightTaskController
     FAIL_PERCENT 0.2
     FAIL 0.01
     TESTENV testenv/testUsdImagingGLDomeLightTaskController
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLVelocityMotion_24
@@ -4582,6 +4605,7 @@ pxr_register_test(testUsdImagingGLVelocityMotion_24
     TESTENV testenv/testUsdImagingGLVelocityMotion
     ENV
         TF_DEBUG=HDSI_VELOCITY_MOTION
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLVelocityMotion_48
@@ -4595,6 +4619,7 @@ pxr_register_test(testUsdImagingGLVelocityMotion_48
     TESTENV testenv/testUsdImagingGLVelocityMotion
     ENV
         TF_DEBUG=HDSI_VELOCITY_MOTION
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdImagingGLMaterialPrimvars
@@ -4605,7 +4630,9 @@ pxr_register_test(testUsdImagingGLMaterialPrimvars
     WARN 0.02
     FAIL_PERCENT 0.02
     WARN_PERCENT 0.01
-    TESTENV testenv/testUsdImagingGLMaterialPrimvars)
+    TESTENV testenv/testUsdImagingGLMaterialPrimvars
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLMaterialsAndInstancers_materialAsPiDescendant
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLBasicDrawing -offscreen -lighting -sceneLights -shading smooth -frameAll -renderSetting domeLightCameraVisibility bool false -stage materialAsPiDescendant.usda -write materialAsPiDescendant.png"
@@ -4613,7 +4640,9 @@ pxr_register_test(testUsdImagingGLMaterialsAndInstancers_materialAsPiDescendant
         materialAsPiDescendant.png
         FAIL 0.008
         FAIL_PERCENT 0.001
-    TESTENV testenv/testUsdImagingGLMaterialsAndInstancers)
+    TESTENV testenv/testUsdImagingGLMaterialsAndInstancers
+    LABELS "requires_gpu"
+)
 
 #
 # # Disabled pending Hydra 2 support
@@ -4624,7 +4653,9 @@ pxr_register_test(testUsdImagingGLMaterialsAndInstancers_materialAsPiDescendant
 #         materialInNiPrototype.png
 #         FAIL 0.008
 #         FAIL_PERCENT 0.001
-#     TESTENV testenv/testUsdImagingGLMaterialsAndInstancers)
+#     TESTENV testenv/testUsdImagingGLMaterialsAndInstancers
+#    LABELS "requires_gpu"
+#)
 
 pxr_register_test(testUsdImagingGLMaterialsAndInstancers_materialAsNiInstance
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLBasicDrawing -offscreen -lighting -sceneLights -shading smooth -frameAll -renderSetting domeLightCameraVisibility bool false -stage materialAsNiInstance.usda -write materialAsNiInstance.png"
@@ -4632,7 +4663,9 @@ pxr_register_test(testUsdImagingGLMaterialsAndInstancers_materialAsNiInstance
         materialAsNiInstance.png
         FAIL 0.008
         FAIL_PERCENT 0.001
-    TESTENV testenv/testUsdImagingGLMaterialsAndInstancers)
+    TESTENV testenv/testUsdImagingGLMaterialsAndInstancers
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLUsdRenderPass_prune
     PYTHON
@@ -4642,8 +4675,9 @@ pxr_register_test(testUsdImagingGLUsdRenderPass_prune
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLUsdRenderPass)
+    TESTENV testenv/testUsdImagingGLUsdRenderPass
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLUsdRenderPass_visibility
     PYTHON
@@ -4653,8 +4687,9 @@ pxr_register_test(testUsdImagingGLUsdRenderPass_visibility
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLUsdRenderPass)
+    TESTENV testenv/testUsdImagingGLUsdRenderPass
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_default
     PYTHON
@@ -4664,8 +4699,9 @@ pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_default
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLUsdRenderPass)
+    TESTENV testenv/testUsdImagingGLUsdRenderPass
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_prune_test
     PYTHON
@@ -4675,8 +4711,9 @@ pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_prune_test
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLUsdRenderPass)
+    TESTENV testenv/testUsdImagingGLUsdRenderPass
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_renderVisibility_test
     PYTHON
@@ -4686,8 +4723,9 @@ pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_renderVisibility_te
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLUsdRenderPass)
+    TESTENV testenv/testUsdImagingGLUsdRenderPass
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_renderVisibility_test2
     PYTHON
@@ -4697,8 +4735,9 @@ pxr_register_test(testUsdImagingGLUsdRenderPassWithInstances_renderVisibility_te
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLUsdRenderPass)
+    TESTENV testenv/testUsdImagingGLUsdRenderPass
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLTextureResync
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLTextureResync --stage testUsdImagingGLTextureResync.usda --deactivate /Scene/Looks/Material1/Texture --deactivate /Scene/Looks/Material2/Texture --write testUsdImagingGLTextureResync.png"
@@ -4706,8 +4745,9 @@ pxr_register_test(testUsdImagingGLTextureResync
         testUsdImagingGLTextureResync.png
     FAIL .001
     FAIL_PERCENT .001
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLTextureResync)
+    TESTENV testenv/testUsdImagingGLTextureResync
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLOIT
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLBasicDrawing -offscreen -lighting -camlight -frameAll -camera /Root/FrontCamera -stage scene.usda -write testUsdImagingGLOIT.png"
@@ -4717,8 +4757,9 @@ pxr_register_test(testUsdImagingGLOIT
     FAIL_PERCENT 0.001
     WARN 0.005
     WARN_PERCENT 0.0005
-    EXPECTED_RETURN_CODE 0
-    TESTENV testenv/testUsdImagingGLOIT)
+    TESTENV testenv/testUsdImagingGLOIT
+    LABELS "requires_gpu"
+)
 
 pxr_register_test(testUsdImagingGLOITPacked
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingGLBasicDrawing -offscreen -lighting -camlight -frameAll -camera /Root/FrontCamera -stage scene.usda -write testUsdImagingGLOIT.png"
@@ -4728,10 +4769,11 @@ pxr_register_test(testUsdImagingGLOITPacked
     FAIL_PERCENT 0.001
     WARN 0.004
     WARN_PERCENT 0.0005
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testUsdImagingGLOIT
     ENV
-        HDX_ENABLE_OIT_PACKED_DATA=1)
+        HDX_ENABLE_OIT_PACKED_DATA=1
+    LABELS "requires_gpu"
+)
 
 #
 # Conditionally install and register MaterialX tests
@@ -4745,8 +4787,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.03
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_standardSurface
@@ -4757,8 +4799,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_standardSurfaceMarble
@@ -4769,8 +4811,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.01
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"    
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_usdPreviewSurface
@@ -4781,8 +4823,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.09
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_mxGlass
@@ -4793,8 +4835,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_basicMxYup
@@ -4805,8 +4847,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.0025
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_basicMxZup
@@ -4817,8 +4859,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.0025
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_mxDirectLights
@@ -4829,8 +4871,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.0025
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_mxDirectLightsCameraLight
@@ -4841,8 +4883,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.0025
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_mxLights
@@ -4853,8 +4895,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_mxColorspaces
@@ -4865,8 +4907,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXBasic_normalMap
@@ -4877,8 +4919,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.1
         WARN 0.05
         WARN_PERCENT 0.03
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXBasic
+        LABELS "requires_gpu"
     )
 
     # MaterialX materials using texture, texture coordinates, and geompropvalues.
@@ -4890,8 +4932,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.05
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxTextured2
@@ -4902,8 +4944,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.0025
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxGeomprop
@@ -4914,8 +4956,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxTexcoord
@@ -4926,8 +4968,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxDefaultTextureVals
@@ -4938,8 +4980,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxFallbackDome
@@ -4950,8 +4992,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxDefaultGemopropVal
@@ -4962,8 +5004,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXTextured_mxTexColorspaces
@@ -4974,8 +5016,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.02
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXTextured
+        LABELS "requires_gpu"
     )
 
 # These two tests are to provide direct comparisons between the Native and
@@ -4992,8 +5034,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.0075
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_nativeMmetallic
@@ -5004,8 +5046,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.6
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_nativeWorkflow
@@ -5016,8 +5058,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_nativeOpacity
@@ -5028,8 +5070,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_nativeClearcoat
@@ -5040,8 +5082,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.6
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_nativeEmissive
@@ -5052,8 +5094,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_nativeNormalMap
@@ -5064,8 +5106,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
 # MaterialX UsdPreviewSurface Materials:
@@ -5077,8 +5119,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.0075
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_materialXmetallic
@@ -5089,8 +5131,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.6
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_materialXworkflow
@@ -5101,8 +5143,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_materialXopacity
@@ -5113,8 +5155,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_materialXclearcoat
@@ -5125,8 +5167,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.6
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_materialXemissive
@@ -5137,8 +5179,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     # pxr_register_test(testUsdImagingGLMaterialXvsNative_materialXnormalMap
@@ -5149,8 +5191,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
     #     FAIL_PERCENT 0.005
     #     WARN 0.05
     #     WARN_PERCENT 0.2
-    #     EXPECTED_RETURN_CODE 0
     #     TESTENV testenv/testUsdImagingGLMaterialXvsNative
+    #     LABELS "requires_gpu"
     # )
 
     pxr_register_test(testUsdImagingGLMaterialXLocalCustomNodes_simpleNodes
@@ -5161,8 +5203,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLocalCustomNodes
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXLocalCustomNodes_nestedNodes
@@ -5173,8 +5215,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLocalCustomNodes
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXLocalCustomNodes_surfaceShaderNodes
@@ -5185,8 +5227,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLocalCustomNodes
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXLibraryCustomNodes_colorNode
@@ -5197,10 +5239,10 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLibraryCustomNodes
         ENV
             PXR_MTLX_PLUGIN_SEARCH_PATHS=./libraryNodes
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXLibraryCustomNodes_nestedNodes
@@ -5211,10 +5253,10 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLibraryCustomNodes
         ENV
             PXR_MTLX_PLUGIN_SEARCH_PATHS=./libraryNodes
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXLibraryCustomNodes_texcoordNodes
@@ -5225,10 +5267,10 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLibraryCustomNodes
         ENV
             PXR_MTLX_PLUGIN_SEARCH_PATHS=./libraryNodes
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLMaterialXLibraryCustomNodes_surfaceShaderNodes
@@ -5239,10 +5281,10 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL_PERCENT 0.005
         WARN 0.05
         WARN_PERCENT 0.2
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLMaterialXLibraryCustomNodes
         ENV
             PXR_MTLX_PLUGIN_SEARCH_PATHS=./libraryNodes
+        LABELS "requires_gpu"
     )
 
     # Not a MaterialX test as such, but requires MaterialX support
@@ -5253,8 +5295,8 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLGeomSubsets
+        LABELS "requires_gpu"
     )
 
     # Not a MaterialX test as such, but requires MaterialX support
@@ -5267,6 +5309,7 @@ if (MaterialX_FOUND AND ${PXR_ENABLE_MATERIALX_SUPPORT})
         TESTENV testenv/testUsdImagingGLNativeImplicits
         ENV
             HDST_ENABLE_NATIVE_SPHERES=1
+        LABELS "requires_gpu"
     )
 
 endif() # MaterialX tests
@@ -5285,12 +5328,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
             testUsdImagingGLHdEmbreePickAndHighlight_004.png
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLHdEmbreePickAndHighlight
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLHdEmbree
@@ -5299,12 +5342,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
             default.png
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLHdEmbree
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLHdEmbree_refined
@@ -5313,12 +5356,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
             refined.png
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLHdEmbree
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLFramingEmbree_1
@@ -5330,12 +5373,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.02
         WARN_PERCENT 0.02
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLFraming
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5348,12 +5391,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.02
         WARN_PERCENT 0.02
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLFraming
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5366,12 +5409,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.02
         WARN_PERCENT 0.02
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLFraming
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5384,12 +5427,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.02
         WARN_PERCENT 0.02
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLFraming
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5402,12 +5445,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.02
         WARN_PERCENT 0.02
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLFraming
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5420,12 +5463,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.02
         WARN_PERCENT 0.02
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLFraming
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLAovVisualization_Embree_depth
@@ -5437,12 +5480,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         WARN 0.025
         WARN_PERCENT 0.005
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLAovVisualization
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5454,12 +5497,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         FAIL_PERCENT 0.025
         WARN 0.025
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLAovVisualization
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5471,12 +5514,12 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         FAIL_PERCENT 0.025
         WARN 0.025
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLAovVisualization
         ENV
             HDEMBREE_JITTER_CAMERA=0
             HDEMBREE_AMBIENT_OCCLUSION_SAMPLES=0
             HDEMBREE_SAMPLES_TO_CONVERGENCE=1
+        LABELS "requires_gpu"
     )
 endif() # Embree tests
 
@@ -5491,10 +5534,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLBasicDrawing
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLBasicDrawing_shadersBindings
@@ -5504,10 +5547,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLBasicDrawing
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLBasicDrawing_shadersRelative
@@ -5517,10 +5560,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLBasicDrawing
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLBasicDrawing_shadersAnim
@@ -5532,10 +5575,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLBasicDrawing
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLGeomSubsets_Adaptive
@@ -5545,10 +5588,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLGeomSubsets
         ENV
             HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLGeomSubsets_High
@@ -5558,8 +5601,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLGeomSubsets
+        LABELS "requires_gpu"
     )
 
 
@@ -5570,8 +5613,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLGeomSubsets
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_instance
@@ -5582,8 +5625,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_instance2
@@ -5594,8 +5637,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_instance3
@@ -5606,8 +5649,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_nestedInstance
@@ -5618,8 +5661,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instance
@@ -5630,8 +5673,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instance2
@@ -5642,8 +5685,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_SceneIndex_instance3
@@ -5654,8 +5697,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLInstancing_SceneIndex_nestedInstance
@@ -5666,8 +5709,8 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL_PERCENT 0.075
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLInstancing
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLBasicDrawingNonBindless_shaders
@@ -5677,10 +5720,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLBasicDrawingNonBindless
         ENV
            HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLBasicDrawingNonBindless_shadersRelative
@@ -5690,10 +5733,10 @@ if (PTEX_FOUND AND ${PXR_ENABLE_PTEX_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLBasicDrawingNonBindless
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 endif() # PTEX tests
 
@@ -5708,10 +5751,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5722,10 +5765,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5736,10 +5779,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5750,10 +5793,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5766,10 +5809,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5782,10 +5825,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL_PERCENT 0.001
         WARN 0.005
         WARN_PERCENT 0.0005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5795,10 +5838,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
             testUsdImagingGLVdbVolumeOrtho.png
         FAIL_PERCENT 2
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5808,10 +5851,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
             testUsdImagingGLVdbVolumeTwoFields.png
         FAIL_PERCENT 2
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
 
@@ -5822,10 +5865,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=1
+        LABELS "requires_gpu"
     )
 
     pxr_register_test(testUsdImagingGLVdbVolumeNonBindless
@@ -5835,10 +5878,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5849,10 +5892,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5863,10 +5906,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5877,10 +5920,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5893,10 +5936,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5909,10 +5952,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL_PERCENT 0.001
         WARN 0.005
         WARN_PERCENT 0.0005
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5922,10 +5965,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
             testUsdImagingGLVdbVolumeOrtho.png
         FAIL_PERCENT 2
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5935,10 +5978,10 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
             testUsdImagingGLVdbVolumeTwoFields.png
         FAIL_PERCENT 2
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 
 
@@ -5949,9 +5992,9 @@ if (OPENVDB_FOUND AND ${PXR_ENABLE_OPENVDB_SUPPORT})
         FAIL 1
         FAIL_PERCENT 1
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
         TESTENV testenv/testUsdImagingGLVdbVolume
         ENV
             HGIGL_ENABLE_BINDLESS_TEXTURE=0
+        LABELS "requires_gpu"
     )
 endif()

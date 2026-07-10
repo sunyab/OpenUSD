@@ -268,22 +268,21 @@ endif()
 #
 pxr_register_test(testHdxCameraAndLight
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxCameraAndLight"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxIdRender
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxIdRender --offscreen"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxIdRender_Refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxIdRender --offscreen --repr refined --refineLevel 2"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxLightAndShadow
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxLightAndShadow"
     TESTENV testenv/testHdxLightAndShadow
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1.png
         color2.png
@@ -294,11 +293,11 @@ pxr_register_test(testHdxLightAndShadow
     PERCEPTUAL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxPickAndHighlight
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxPickAndHighlight --offscreen"
     TESTENV testenv/testHdxPickAndHighlight
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1_unselected.png
         color2_select.png
@@ -309,17 +308,17 @@ pxr_register_test(testHdxPickAndHighlight
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxPickResolveMode
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxPickResolveMode --offscreen"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG="HDX_SELECTION_SETUP HD_SELECTION_UPDATE"
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxPickTarget
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxPickTarget --offscreen"
     TESTENV testenv/testHdxPickTarget
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1_unselected.png
         color2_cube0_pick_face.png
@@ -336,11 +335,11 @@ pxr_register_test(testHdxPickTarget
     PERCEPTUAL
     ENV
         TF_DEBUG="HDX_SELECTION_SETUP HD_SELECTION_UPDATE"
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxPickingWithReprAndRefineChanges
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxPickingWithReprAndRefineChanges --offscreen"
     TESTENV testenv/testHdxPickingWithReprAndRefineChanges
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1_unselected.png
         color2_refine_wont_change_cube1.png
@@ -351,11 +350,11 @@ pxr_register_test(testHdxPickingWithReprAndRefineChanges
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxRenderTask
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxRenderTask"
     TESTENV testenv/testHdxRenderTask
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1.png
         color2.png
@@ -365,6 +364,7 @@ pxr_register_test(testHdxRenderTask
     PERCEPTUAL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 
 pxr_build_test(testHdxOitShaderRetention
@@ -382,14 +382,13 @@ pxr_build_test(testHdxOitShaderRetention
 )
 pxr_register_test(testHdxOitShaderRetention
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxOitShaderRetention"
-    EXPECTED_RETURN_CODE 0
     ENV
         HDX_ENABLE_OIT=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxUnpickablesAsOccluders
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxUnpickablesAsOccluders --offscreen"
     TESTENV testenv/testHdxUnpickablesAsOccluders
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1_unselected.png
         color2_cube0_pickable.png
@@ -397,15 +396,16 @@ pxr_register_test(testHdxUnpickablesAsOccluders
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdxNoResourceBindings
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxNoResourceBindings"
     TESTENV testenv/testHdxNoResourceBindings
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color.png
     FAIL 0.01
     FAIL_PERCENT 0.01
+    LABELS "requires_gpu"
 )
 # Certain tests use plugins that require shared libraries.
 if (TARGET shared_libs)
@@ -424,7 +424,6 @@ pxr_build_test(testHdxDrawTarget
 pxr_register_test(testHdxDrawTarget
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdxDrawTarget"
     TESTENV testenv/testHdxDrawTarget
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         color1.png
     FAIL 1
@@ -432,6 +431,7 @@ pxr_register_test(testHdxDrawTarget
     PERCEPTUAL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 
 endif() # TARGET shared_libs

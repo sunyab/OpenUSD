@@ -28,62 +28,62 @@ pxr_register_test(testUsdviewAlive
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testAlive.py test.usda"
     TESTENV testenv/testUsdviewAlive
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDetachedLayers1
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testDetachedLayers_1.py --norender --detachLayers root.usd"
     TESTENV testenv/testUsdviewDetachedLayers
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDetachedLayers2
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testDetachedLayers_2.py --norender --detachLayersInclude 'foo,with spaces' root.usd"
     TESTENV testenv/testUsdviewDetachedLayers
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDetachedLayers3
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testDetachedLayers_3.py --norender --detachLayers --detachLayersExclude 'foo,with spaces' root.usd"
     TESTENV testenv/testUsdviewDetachedLayers
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDetachedLayers4
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testDetachedLayers_4.py --norender root.usd"
     TESTENV testenv/testUsdviewDetachedLayers
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments1
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testValidFileArg.py test.usda"
     TESTENV testenv/testUsdviewFileArguments
-    EXPECTED_RETURN_CODE 0
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments2
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testValidFileArg.py test.usd"
     TESTENV testenv/testUsdviewFileArguments
-    EXPECTED_RETURN_CODE 0
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments3
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testValidFileArg.py test.usdc"
     TESTENV testenv/testUsdviewFileArguments
-    EXPECTED_RETURN_CODE 0
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments4
@@ -95,6 +95,7 @@ pxr_register_test(testUsdviewFileArguments4
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments5
@@ -107,6 +108,7 @@ pxr_register_test(testUsdviewFileArguments5
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments6
@@ -118,6 +120,7 @@ pxr_register_test(testUsdviewFileArguments6
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFileArguments7
@@ -129,6 +132,7 @@ pxr_register_test(testUsdviewFileArguments7
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewWrapper0
@@ -137,9 +141,9 @@ pxr_register_test(testUsdviewWrapper0
     TESTENV testenv/testUsdviewWrapper
     STDOUT_REDIRECT valid_output_no_file
     DIFF_COMPARE valid_output_no_file
-    EXPECTED_RETURN_CODE 0
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewWrapper1
@@ -148,9 +152,9 @@ pxr_register_test(testUsdviewWrapper1
     TESTENV testenv/testUsdviewWrapper
     STDOUT_REDIRECT valid_output
     DIFF_COMPARE valid_output
-    EXPECTED_RETURN_CODE 0
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewWrapper2
@@ -160,6 +164,7 @@ pxr_register_test(testUsdviewWrapper2
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewWrapper3
@@ -169,6 +174,7 @@ pxr_register_test(testUsdviewWrapper3
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewWrapper4
@@ -178,6 +184,7 @@ pxr_register_test(testUsdviewWrapper4
     EXPECTED_RETURN_CODE 1
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewWrapper5
@@ -187,41 +194,42 @@ pxr_register_test(testUsdviewWrapper5
     EXPECTED_RETURN_CODE 2
     ENV
         PXR_USDVIEW_SUPPRESS_STATE_SAVING=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewPrimPathBar
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewPrimPathBar.py test.usda"
     TESTENV testenv/testUsdviewPrimPathBar
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewPrimSearch
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewPrimSearch.py test.usda"
     TESTENV testenv/testUsdviewPrimSearch
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewPropertySearch
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewPropertySearch.py test.usda"
     TESTENV testenv/testUsdviewPropertySearch
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewMetadatatabSelect
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewMetadatatabSelect.py test.usda"
     TESTENV testenv/testUsdviewMetadatatabSelect
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewTimeSamples
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewTimeSamples.py test.usda"
     TESTENV testenv/testUsdviewTimeSamples
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewNavigationKeys
@@ -229,91 +237,91 @@ pxr_register_test(testUsdviewNavigationKeys
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewNavigationKeys.py test.usda"
     TESTENV testenv/testUsdviewNavigationKeys
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewNoPlugins
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewNoPlugins.py --noplugins test.usda"
     TESTENV testenv/testUsdviewNoPlugins
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewInterpreterNoRender
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewInterpreterNoRender.py --norender test.usda"
     TESTENV testenv/testUsdviewInterpreterNoRender
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLoadPlugins_alive
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewLoadPlugins_alive.py test.usda"
     TESTENV testenv/testUsdviewLoadPlugins
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLoadPlugins_multipleContainers
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewLoadPlugins_multipleContainers.py test.usda"
     TESTENV testenv/testUsdviewLoadPlugins
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLoadPlugins_missingContainer
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewLoadPlugins_missingContainer.py test.usda"
     TESTENV testenv/testUsdviewLoadPlugins
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLoadPlugins_duplicateCommand
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewLoadPlugins_duplicateCommand.py test.usda"
     TESTENV testenv/testUsdviewLoadPlugins
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLoadPlugins_chained
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewLoadPlugins_chained.py test.usda"
     TESTENV testenv/testUsdviewLoadPlugins
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewUpAxis_yUp
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewUpAxis_yUp.py testYUp.usda"
     TESTENV testenv/testUsdviewUpAxis
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDefaultFontFamily
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewDefaultFontFamily.py test.usda"
     TESTENV testenv/testUsdviewDefaultFontFamily
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewPrimTreeExpansion
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewPrimTreeExpansion.py test.usda"
     TESTENV testenv/testUsdviewPrimTreeExpansion
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewAnimatedBounds
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewAnimatedBounds.py test.usda"
     TESTENV testenv/testUsdviewAnimatedBounds
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewMeshBounds
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewMeshBounds.py meshBounds.usda"
     TESTENV testenv/testUsdviewMeshBounds
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 if (APPLE)
@@ -346,7 +354,7 @@ pxr_register_test(testUsdviewFreeCamera
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFreeCameraAspect
@@ -360,7 +368,7 @@ pxr_register_test(testUsdviewFreeCameraAspect
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewSelectionHighlighting
@@ -379,7 +387,7 @@ pxr_register_test(testUsdviewSelectionHighlighting
         nestedInstanceSelection3.png
     FAIL 0.05
     FAIL_PERCENT 0.03
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewSelectionHighlighting_Delegate
@@ -395,9 +403,9 @@ pxr_register_test(testUsdviewSelectionHighlighting_Delegate
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewRenderMode
@@ -417,7 +425,7 @@ pxr_register_test(testUsdviewRenderMode
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLights
@@ -432,7 +440,7 @@ pxr_register_test(testUsdviewLights
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLights_yup
@@ -445,7 +453,7 @@ pxr_register_test(testUsdviewLights_yup
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewSceneLights
@@ -465,7 +473,7 @@ pxr_register_test(testUsdviewSceneLights
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewSceneLights_Delegate
@@ -485,9 +493,9 @@ pxr_register_test(testUsdviewSceneLights_Delegate
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=0
+    LABELS "requires_gpu"
 )
 
 
@@ -501,7 +509,7 @@ pxr_register_test(testUsdviewSceneMaterials
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLightVisibility
@@ -516,7 +524,7 @@ pxr_register_test(testUsdviewLightVisibility
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewLightVisibility_varying
@@ -529,7 +537,7 @@ pxr_register_test(testUsdviewLightVisibility_varying
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewBackgroundColor
@@ -544,7 +552,7 @@ pxr_register_test(testUsdviewBackgroundColor
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewComplexity
@@ -559,7 +567,7 @@ pxr_register_test(testUsdviewComplexity
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewFieldOfView
@@ -573,7 +581,7 @@ pxr_register_test(testUsdviewFieldOfView
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewClippingPlanes
@@ -590,7 +598,7 @@ pxr_register_test(testUsdviewClippingPlanes
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDefaultMaterial
@@ -605,7 +613,7 @@ pxr_register_test(testUsdviewDefaultMaterial
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewCameraMaskMode
@@ -620,7 +628,7 @@ pxr_register_test(testUsdviewCameraMaskMode
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
@@ -636,7 +644,7 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         FAIL 0.05
         FAIL_PERCENT 0.03
         PERCEPTUAL
-        EXPECTED_RETURN_CODE 0
+        LABELS "requires_gpu"
     )
 endif()
 
@@ -652,7 +660,7 @@ pxr_register_test(testUsdviewFrameSelection
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewReloadReopen
@@ -666,7 +674,7 @@ pxr_register_test(testUsdviewReloadReopen
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewMaterialEdits
@@ -679,7 +687,7 @@ pxr_register_test(testUsdviewMaterialEdits
         3.png
     FAIL 0.05
     FAIL_PERCENT 0.03
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewUpAxis_zUp
@@ -691,7 +699,7 @@ pxr_register_test(testUsdviewUpAxis_zUp
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewDeactivate
@@ -706,7 +714,7 @@ pxr_register_test(testUsdviewDeactivate
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewCPUSkinning
@@ -724,9 +732,9 @@ pxr_register_test(testUsdviewCPUSkinning
         post_skel_resync_frame_6.png
     FAIL 0.05
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=1
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewGPUSkinning
@@ -744,9 +752,9 @@ pxr_register_test(testUsdviewGPUSkinning
         post_skel_resync_frame_6.png
     FAIL 0.05
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     ENV
         USDSKELIMAGING_FORCE_CPU_COMPUTE=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewInfGeom
@@ -759,7 +767,7 @@ pxr_register_test(testUsdviewInfGeom
     FAIL 0.05
     FAIL_PERCENT 0.06
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 # The following test is disabled since it seems to require Renderman from
@@ -773,7 +781,7 @@ pxr_register_test(testUsdviewInfGeom
 #    FAIL 1
 #    FAIL_PERCENT 0.0002
 #    PERCEPTUAL
-#    EXPECTED_RETURN_CODE 0
+#    LABELS "requires_gpu"
 #)
 
 pxr_register_test(testUsdviewPrimvarEdits
@@ -793,7 +801,7 @@ pxr_register_test(testUsdviewPrimvarEdits
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewOIT
@@ -805,7 +813,7 @@ pxr_register_test(testUsdviewOIT
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewAdditive
@@ -817,7 +825,7 @@ pxr_register_test(testUsdviewAdditive
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewVariantSelection
@@ -836,7 +844,7 @@ pxr_register_test(testUsdviewVariantSelection
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewPointWidths
@@ -852,7 +860,7 @@ pxr_register_test(testUsdviewPointWidths
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewPointInstancerVariant
@@ -865,7 +873,7 @@ pxr_register_test(testUsdviewPointInstancerVariant
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewExpressionVariableEdits_Delegate
@@ -879,9 +887,9 @@ pxr_register_test(testUsdviewExpressionVariableEdits_Delegate
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewExpressionVariableEdits
@@ -895,14 +903,13 @@ pxr_register_test(testUsdviewExpressionVariableEdits
     FAIL 0.05
     FAIL_PERCENT 0.03
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewInstancingEdits
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewInstancingEdits.py test.usda"
     TESTENV testenv/testUsdviewInstancingEdits
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         instanceWithParent.png
         instanceWithParentDeactivated.png
@@ -914,13 +921,13 @@ pxr_register_test(testUsdviewInstancingEdits
     WARN_PERCENT 0.2
     ENV
         USDIMAGINGGL_ENGINE_ENABLE_SCENE_INDEX=false
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdviewInstancingEdits_SceneIndex
     PYTHON
     COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --testScript testUsdviewInstancingEdits.py test.usda"
     TESTENV testenv/testUsdviewInstancingEdits
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         instanceWithParent.png
         instanceWithParentDeactivated.png
@@ -934,6 +941,7 @@ pxr_register_test(testUsdviewInstancingEdits_SceneIndex
     FAIL_PERCENT 0.1
     WARN 0.02
     WARN_PERCENT 0.2
+    LABELS "requires_gpu"
 )
 
 if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
@@ -941,7 +949,6 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         PYTHON
         COMMAND "${CMAKE_INSTALL_PREFIX}/bin/testusdview --renderer Embree --testScript testUsdviewInstancingEditsEmbree.py test.usda"
         TESTENV testenv/testUsdviewInstancingEdits
-        EXPECTED_RETURN_CODE 0
         IMAGE_DIFF_COMPARE
             instancerInvisibleEmbree.png
             instancerVisibleEmbree.png
@@ -949,6 +956,7 @@ if (EMBREE_FOUND AND ${PXR_BUILD_EMBREE_PLUGIN})
         FAIL_PERCENT 0.1
         WARN 0.02
         WARN_PERCENT 0.2
+        LABELS "requires_gpu"
     )
 endif()
 
@@ -966,8 +974,8 @@ if(OPENCOLORIO_FOUND AND ${PXR_BUILD_OPENCOLORIO_PLUGIN})
         FAIL_PERCENT 0.01
         WARN 0.01
         WARN_PERCENT 0.005
-        EXPECTED_RETURN_CODE 0
         ENV
             OCIO=test.ocio
+        LABELS "requires_gpu"
     )
 endif()

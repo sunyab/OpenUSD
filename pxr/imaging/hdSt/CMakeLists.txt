@@ -612,9 +612,9 @@ if (X11_FOUND)
 # exception.
 pxr_register_test(testHdStBufferSource
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBufferSource"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 endif()
 
@@ -626,10 +626,10 @@ endif()
 # Unlike most hdSt tests currently, testHdStQualifiers can run on all platforms.
 pxr_register_test(testHdStQualifiers
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStQualifiers --offscreen --flatQF FlatMember --nopersQF NoPerspectiveMember --centroidQF CentroidMember --sampleQF SampleMember"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStQualifiers
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 
 if (APPLE)
@@ -647,7 +647,6 @@ endif()
 #
 pxr_register_test(testHdStBarAllocationLimit
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBarAllocationLimit --offscreen --write testHdStBarAllocationLimit.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStBarAllocationLimit.png
     FAIL 1
@@ -657,6 +656,7 @@ pxr_register_test(testHdStBarAllocationLimit
     ENV
         TF_DEBUG=HD_SAFE_MODE
         HD_MAX_VBO_SIZE=268435456 # 2^28
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_hull.png"
@@ -665,11 +665,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_smoothHull.png"
@@ -678,11 +678,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_wire.png"
@@ -691,11 +691,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_wireOnSurf.png"
@@ -704,11 +704,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refined --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_refined.png"
@@ -717,11 +717,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWire --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_refinedWire.png"
@@ -730,11 +730,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWireOnSurf --refineLevel 1 --write testHdStBasicDrawing_adaptive_lighting_lv1_refinedWireOnSurf.png"
@@ -743,11 +743,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv1_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_hull.png"
@@ -756,11 +756,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_smoothHull.png"
@@ -769,11 +769,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_wire.png"
@@ -782,11 +782,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_wireOnSurf.png"
@@ -795,11 +795,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refined --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_refined.png"
@@ -808,11 +808,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWire --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_refinedWire.png"
@@ -821,11 +821,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWireOnSurf --refineLevel 2 --write testHdStBasicDrawing_adaptive_lighting_lv2_refinedWireOnSurf.png"
@@ -834,11 +834,11 @@ pxr_register_test(testHdStBasicDrawing_Adaptive_lighting_lv2_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Adaptive
     ENV
         HD_ENABLE_OPENSUBDIV3_ADAPTIVE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_points
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr points --write testHdStBasicDrawing_lv0_points.png"
@@ -847,12 +847,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_points
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --write testHdStBasicDrawing_lv0_hull.png"
@@ -861,12 +861,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --write testHdStBasicDrawing_lv0_smoothHull.png"
@@ -875,12 +875,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --write testHdStBasicDrawing_lv0_wire.png"
@@ -889,12 +889,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --write testHdStBasicDrawing_lv0_wireOnSurf.png"
@@ -903,12 +903,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_hull_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_hull_cullback.png"
@@ -917,12 +917,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_hull_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_smoothHull_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_smoothHull_cullback.png"
@@ -931,12 +931,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_smoothHull_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wire_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_wire_cullback.png"
@@ -945,12 +945,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wire_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wireOnSurf_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_wireOnSurf_cullback.png"
@@ -959,12 +959,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wireOnSurf_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_hull_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_hull_cullfront.png"
@@ -973,12 +973,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_hull_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_smoothHull_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_smoothHull_cullfront.png"
@@ -987,12 +987,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_smoothHull_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wire_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_wire_cullfront.png"
@@ -1001,12 +1001,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wire_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wireOnSurf_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_wireOnSurf_cullfront.png"
@@ -1015,12 +1015,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv0_wireOnSurf_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_points
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr points --refineLevel 1 --write testHdStBasicDrawing_lv1_points.png"
@@ -1029,12 +1029,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_points
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --refineLevel 1 --write testHdStBasicDrawing_lv1_hull.png"
@@ -1043,12 +1043,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --refineLevel 1 --write testHdStBasicDrawing_lv1_smoothHull.png"
@@ -1057,12 +1057,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --refineLevel 1 --write testHdStBasicDrawing_lv1_wire.png"
@@ -1071,12 +1071,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lv1_wireOnSurf.png"
@@ -1085,12 +1085,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refined --refineLevel 1 --write testHdStBasicDrawing_lv1_refined.png"
@@ -1099,12 +1099,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWire --refineLevel 1 --write testHdStBasicDrawing_lv1_refinedWire.png"
@@ -1113,12 +1113,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv1_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lv1_refinedWireOnSurf.png"
@@ -1127,12 +1127,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv1_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --refineLevel 2 --write testHdStBasicDrawing_lv2_hull.png"
@@ -1141,12 +1141,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --refineLevel 2 --write testHdStBasicDrawing_lv2_smoothHull.png"
@@ -1155,12 +1155,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --refineLevel 2 --write testHdStBasicDrawing_lv2_wire.png"
@@ -1169,12 +1169,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lv2_wireOnSurf.png"
@@ -1183,12 +1183,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refined --refineLevel 2 --write testHdStBasicDrawing_lv2_refined.png"
@@ -1197,12 +1197,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWire --refineLevel 2 --write testHdStBasicDrawing_lv2_refinedWire.png"
@@ -1211,12 +1211,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lv2_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lv2_refinedWireOnSurf.png"
@@ -1225,12 +1225,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lv2_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --write testHdStBasicDrawing_lighting_lv0_hull.png"
@@ -1239,12 +1239,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --write testHdStBasicDrawing_lighting_lv0_smoothHull.png"
@@ -1253,12 +1253,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --write testHdStBasicDrawing_lighting_lv0_wire.png"
@@ -1267,12 +1267,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --write testHdStBasicDrawing_lighting_lv0_wireOnSurf.png"
@@ -1281,12 +1281,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv0_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_hull.png"
@@ -1295,12 +1295,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_smoothHull.png"
@@ -1309,12 +1309,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_wire.png"
@@ -1323,12 +1323,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_wireOnSurf.png"
@@ -1337,12 +1337,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refined --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_refined.png"
@@ -1351,12 +1351,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWire --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_refinedWire.png"
@@ -1365,12 +1365,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_refinedWireOnSurf.png"
@@ -1379,12 +1379,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv1_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_hull.png"
@@ -1393,12 +1393,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_smoothHull.png"
@@ -1407,12 +1407,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_wire.png"
@@ -1421,12 +1421,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_wireOnSurf.png"
@@ -1435,12 +1435,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refined --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_refined.png"
@@ -1449,12 +1449,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWire --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_refinedWire.png"
@@ -1463,12 +1463,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_refinedWireOnSurf.png"
@@ -1477,12 +1477,12 @@ pxr_register_test(testHdStBasicDrawing_Immediate_lighting_lv2_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         HGIGL_ENABLE_MULTI_DRAW_INDIRECT=0
         HGIVULKAN_ENABLE_MULTI_DRAW_INDIRECT=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_points
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr points --write testHdStBasicDrawing_lv0_points.png"
@@ -1491,10 +1491,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_points
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --write testHdStBasicDrawing_lv0_hull.png"
@@ -1503,10 +1503,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --write testHdStBasicDrawing_lv0_smoothHull.png"
@@ -1515,10 +1515,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --write testHdStBasicDrawing_lv0_wire.png"
@@ -1527,10 +1527,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --write testHdStBasicDrawing_lv0_wireOnSurf.png"
@@ -1539,10 +1539,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_hull_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_hull_cullback.png"
@@ -1551,10 +1551,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_hull_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_smoothHull_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_smoothHull_cullback.png"
@@ -1563,10 +1563,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_smoothHull_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_wire_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_wire_cullback.png"
@@ -1575,10 +1575,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_wire_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_wireOnSurf_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_lv0_wireOnSurf_cullback.png"
@@ -1587,10 +1587,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_wireOnSurf_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_hull_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_hull_cullfront.png"
@@ -1599,10 +1599,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_hull_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_smoothHull_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_smoothHull_cullfront.png"
@@ -1611,10 +1611,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_smoothHull_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_wire_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_wire_cullfront.png"
@@ -1623,10 +1623,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_wire_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv0_wireOnSurf_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_lv0_wireOnSurf_cullfront.png"
@@ -1635,10 +1635,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv0_wireOnSurf_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_points
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr points --refineLevel 1 --write testHdStBasicDrawing_lv1_points.png"
@@ -1647,10 +1647,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_points
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --refineLevel 1 --write testHdStBasicDrawing_lv1_hull.png"
@@ -1659,10 +1659,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --refineLevel 1 --write testHdStBasicDrawing_lv1_smoothHull.png"
@@ -1671,10 +1671,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --refineLevel 1 --write testHdStBasicDrawing_lv1_wire.png"
@@ -1683,10 +1683,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lv1_wireOnSurf.png"
@@ -1695,10 +1695,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refined --refineLevel 1 --write testHdStBasicDrawing_lv1_refined.png"
@@ -1707,10 +1707,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWire --refineLevel 1 --write testHdStBasicDrawing_lv1_refinedWire.png"
@@ -1719,10 +1719,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv1_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lv1_refinedWireOnSurf.png"
@@ -1731,10 +1731,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv1_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --refineLevel 2 --write testHdStBasicDrawing_lv2_hull.png"
@@ -1743,10 +1743,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --refineLevel 2 --write testHdStBasicDrawing_lv2_smoothHull.png"
@@ -1755,10 +1755,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --refineLevel 2 --write testHdStBasicDrawing_lv2_wire.png"
@@ -1767,10 +1767,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lv2_wireOnSurf.png"
@@ -1779,10 +1779,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refined --refineLevel 2 --write testHdStBasicDrawing_lv2_refined.png"
@@ -1791,10 +1791,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWire --refineLevel 2 --write testHdStBasicDrawing_lv2_refinedWire.png"
@@ -1803,10 +1803,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lv2_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr refinedWireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lv2_refinedWireOnSurf.png"
@@ -1815,10 +1815,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lv2_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --write testHdStBasicDrawing_lighting_lv0_hull.png"
@@ -1827,10 +1827,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --write testHdStBasicDrawing_lighting_lv0_smoothHull.png"
@@ -1839,10 +1839,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --write testHdStBasicDrawing_lighting_lv0_wire.png"
@@ -1851,10 +1851,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --write testHdStBasicDrawing_lighting_lv0_wireOnSurf.png"
@@ -1863,10 +1863,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv0_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_hull.png"
@@ -1875,10 +1875,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_smoothHull.png"
@@ -1887,10 +1887,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_wire.png"
@@ -1899,10 +1899,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_wireOnSurf.png"
@@ -1911,10 +1911,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refined --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_refined.png"
@@ -1923,10 +1923,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWire --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_refinedWire.png"
@@ -1935,10 +1935,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWireOnSurf --refineLevel 1 --write testHdStBasicDrawing_lighting_lv1_refinedWireOnSurf.png"
@@ -1947,10 +1947,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv1_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr hull --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_hull.png"
@@ -1959,10 +1959,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr smoothHull --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_smoothHull.png"
@@ -1971,10 +1971,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wire --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_wire.png"
@@ -1983,10 +1983,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr wireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_wireOnSurf.png"
@@ -1995,10 +1995,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refined --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_refined.png"
@@ -2007,10 +2007,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_refined
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_refinedWire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWire --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_refinedWire.png"
@@ -2019,10 +2019,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_refinedWire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_refinedWireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --lighting --repr refinedWireOnSurf --refineLevel 2 --write testHdStBasicDrawing_lighting_lv2_refinedWireOnSurf.png"
@@ -2031,10 +2031,10 @@ pxr_register_test(testHdStBasicDrawing_MDI_lighting_lv2_refinedWireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_hull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --write testHdStBasicDrawing_quad_hull.png"
@@ -2043,11 +2043,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_hull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_smoothHull
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --write testHdStBasicDrawing_quad_smoothHull.png"
@@ -2056,11 +2056,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_smoothHull
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --write testHdStBasicDrawing_quad_wire.png"
@@ -2069,11 +2069,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_wire
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_wireOnSurf
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --write testHdStBasicDrawing_quad_wireOnSurf.png"
@@ -2082,11 +2082,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_wireOnSurf
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_hull_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_quad_hull_cullback.png"
@@ -2095,11 +2095,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_hull_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_smoothHull_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_quad_smoothHull_cullback.png"
@@ -2108,11 +2108,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_smoothHull_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_wire_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_quad_wire_cullback.png"
@@ -2121,11 +2121,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_wire_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_wireOnSurf_cullback
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --cullStyle BackUnlessDoubleSided --write testHdStBasicDrawing_quad_wireOnSurf_cullback.png"
@@ -2134,11 +2134,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_wireOnSurf_cullback
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_hull_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr hull --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_quad_hull_cullfront.png"
@@ -2147,11 +2147,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_hull_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_smoothHull_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr smoothHull --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_quad_smoothHull_cullfront.png"
@@ -2160,11 +2160,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_smoothHull_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_wire_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wire --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_quad_wire_cullfront.png"
@@ -2173,11 +2173,11 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_wire_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBasicDrawing_Quadrangulate_wireOnSurf_cullfront
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --repr wireOnSurf --cullStyle FrontUnlessDoubleSided --write testHdStBasicDrawing_quad_wireOnSurf_cullfront.png"
@@ -2186,22 +2186,21 @@ pxr_register_test(testHdStBasicDrawing_Quadrangulate_wireOnSurf_cullfront
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStBasicDrawing_Quadrangulate
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBufferAggregation
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBufferAggregation"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
         HD_MAX_VBO_SIZE=268435456 # 2^28
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBufferArray
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBufferArray"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT testHdStBufferArray-Run1-stdout.txt
     DIFF_COMPARE testHdStBufferArray-Run1-stdout.txt
     TESTENV testenv/testHdStBufferArray
@@ -2209,10 +2208,10 @@ pxr_register_test(testHdStBufferArray
         TF_DEBUG=HD_SAFE_MODE
         HD_ENABLE_DOUBLE_MATRIX=1
         HD_ENABLE_PACKED_NORMALS=0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBufferArrayInstancingDisabled
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBufferArray"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT testHdStBufferArrayInstancingDisabled-Run1-stdout.txt
     DIFF_COMPARE testHdStBufferArrayInstancingDisabled-Run1-stdout.txt
     TESTENV testenv/testHdStBufferArrayInstancingDisabled
@@ -2221,12 +2220,13 @@ pxr_register_test(testHdStBufferArrayInstancingDisabled
         HD_ENABLE_DOUBLE_MATRIX=1
         HD_ENABLE_PACKED_NORMALS=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStBufferSourceDependency
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBufferSourceDependency"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStClipPlanes1
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --clipPlane -1 0 0 -1.5 --write testHdStClipPlanes1.png"
@@ -2235,10 +2235,10 @@ pxr_register_test(testHdStClipPlanes1
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStClipPlanes
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStClipPlanes2
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStBasicDrawing --offscreen --clipPlane 1 0 0 1.5 --clipPlane -1 0 0 1.5 --write testHdStClipPlanes2.png"
@@ -2247,102 +2247,102 @@ pxr_register_test(testHdStClipPlanes2
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStClipPlanes
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 
 function(register_codegen_tests suffix hgi_env)
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_Indirect
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_indirect.out
+            STDOUT_REDIRECT codegen_mesh_indirect.out
         DIFF_COMPARE codegen_mesh_indirect.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_Indirect_SmoothNormals
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh --smoothNormals"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_indirect_smoothNormals.out
+            STDOUT_REDIRECT codegen_mesh_indirect_smoothNormals.out
         DIFF_COMPARE codegen_mesh_indirect_smoothNormals.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_Indirect_DoubleSided
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh --doubleSided"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_indirect_doubleSided.out
+            STDOUT_REDIRECT codegen_mesh_indirect_doubleSided.out
         DIFF_COMPARE codegen_mesh_indirect_doubleSided.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_Indirect_FaceVarying
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh --faceVarying"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_indirect_faceVarying.out
+            STDOUT_REDIRECT codegen_mesh_indirect_faceVarying.out
         DIFF_COMPARE codegen_mesh_indirect_faceVarying.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_Indirect_Instance
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh --instance"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_indirect_instance.out
+            STDOUT_REDIRECT codegen_mesh_indirect_instance.out
         DIFF_COMPARE codegen_mesh_indirect_instance.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_EdgeOnly
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh --edgeOnly"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_edgeonly.out
+            STDOUT_REDIRECT codegen_mesh_edgeonly.out
         DIFF_COMPARE codegen_mesh_edgeonly.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Mesh_EdgeOnly_BlendWireframe
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --mesh --edgeOnly --blendWireframe"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_mesh_edgeonly_blendwireframe.out
+            STDOUT_REDIRECT codegen_mesh_edgeonly_blendwireframe.out
         DIFF_COMPARE codegen_mesh_edgeonly_blendwireframe.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Curves_Indirect
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --curves"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_curves_indirect.out
+            STDOUT_REDIRECT codegen_curves_indirect.out
         DIFF_COMPARE codegen_curves_indirect.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
     pxr_register_test(testHdStCodeGen${suffix}_Points_Indirect
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCodeGen --points"
-        EXPECTED_RETURN_CODE 0
-        STDOUT_REDIRECT codegen_points_indirect.out
+            STDOUT_REDIRECT codegen_points_indirect.out
         DIFF_COMPARE codegen_points_indirect.out
         TESTENV testenv/testHdStCodeGen${suffix}
         ENV
             TF_DEBUG=HD_SAFE_MODE
             ${hgi_env}
+        LABELS "requires_gpu"
     )
 endfunction()
 # OpenGL codegen tests require X11 to create a context
@@ -2355,7 +2355,6 @@ endif()
 
 pxr_register_test(testHdStCurveDrawing_lv0_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCurveDrawing --offscreen --repr refined --refineLevel 0 --write testHdStCurveDrawing_lv0_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStCurveDrawing_lv0_refined.png
     FAIL 1
@@ -2364,10 +2363,10 @@ pxr_register_test(testHdStCurveDrawing_lv0_refined
     TESTENV testenv/testHdStCurveDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStCurveDrawing_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCurveDrawing --offscreen --repr refined --refineLevel 1 --write testHdStCurveDrawing_lv1_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStCurveDrawing_lv1_refined.png
     FAIL 1
@@ -2376,10 +2375,10 @@ pxr_register_test(testHdStCurveDrawing_lv1_refined
     TESTENV testenv/testHdStCurveDrawing
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStCurvePrimvarInterpolation_lv0_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCurvePrimvarInterpolation --offscreen --repr refined --refineLevel 0 --write testHdStCurvePrimvarInterpolation_lv0_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStCurvePrimvarInterpolation_lv0_refined.png
     FAIL 1
@@ -2388,10 +2387,10 @@ pxr_register_test(testHdStCurvePrimvarInterpolation_lv0_refined
     TESTENV testenv/testHdStCurvePrimvarInterpolation
     ENV
         TF_DEBUG=HD_DISABLE_MULTITHREADED_RPRIM_SYNC
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStCurvePrimvarInterpolation_lv1_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCurvePrimvarInterpolation --offscreen --repr refined --refineLevel 1 --write testHdStCurvePrimvarInterpolation_lv1_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStCurvePrimvarInterpolation_lv1_refined.png
     FAIL 1
@@ -2400,10 +2399,10 @@ pxr_register_test(testHdStCurvePrimvarInterpolation_lv1_refined
     TESTENV testenv/testHdStCurvePrimvarInterpolation
     ENV
         TF_DEBUG=HD_DISABLE_MULTITHREADED_RPRIM_SYNC
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStCurvePrimvarInterpolation_lv3_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCurvePrimvarInterpolation --offscreen --repr refined --refineLevel 3 --write testHdStCurvePrimvarInterpolation_lv3_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStCurvePrimvarInterpolation_lv3_refined.png
     FAIL 1
@@ -2412,16 +2411,16 @@ pxr_register_test(testHdStCurvePrimvarInterpolation_lv3_refined
     TESTENV testenv/testHdStCurvePrimvarInterpolation
     ENV
         TF_DEBUG=HD_DISABLE_MULTITHREADED_RPRIM_SYNC
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStCurvesPrimvars
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStCurvesPrimvars"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDisplayStyle
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDisplayStyle --offscreen --write testHdStDisplayStyle.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStDisplayStyle.png
     FAIL 1
@@ -2430,10 +2429,10 @@ pxr_register_test(testHdStDisplayStyle
     TESTENV testenv/testHdStDisplayStyle
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDisplayStyle_refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDisplayStyle --offscreen --refineLevel 2 --write testHdStDisplayStyle_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStDisplayStyle_refined.png
     FAIL 1
@@ -2442,10 +2441,10 @@ pxr_register_test(testHdStDisplayStyle_refined
     TESTENV testenv/testHdStDisplayStyle
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDepthBias
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDepthBias --offscreen"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStDepthBias_disabled.png
         testHdStDepthBias_enabled.png
@@ -2454,10 +2453,10 @@ pxr_register_test(testHdStDepthBias
     TESTENV testenv/testHdStDepthBias
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDrawBatching
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDrawBatching"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT testHdStDrawBatching-Run1-stdout.txt
     DIFF_COMPARE testHdStDrawBatching-Run1-stdout.txt
     TESTENV testenv/testHdStDrawBatching
@@ -2467,21 +2466,21 @@ pxr_register_test(testHdStDrawBatching
         HD_ENABLE_GPU_COUNT_VISIBLE_INSTANCES=1
         HD_ENABLE_PACKED_NORMALS=0
         HGI_ENABLE_VULKAN=0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDrawItemIntegrity
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDrawItemIntegrity --offscreen"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDrawItemsCache
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDrawItemsCache --offscreen"
-    EXPECTED_RETURN_CODE 0
     ENV
         HDST_ENABLE_DRAW_ITEMS_CACHE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStDynamicUvTexture
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStDynamicUvTexture --offscreen"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         outTextureDarkBlue.png
         outTextureLightBlue.png
@@ -2491,10 +2490,10 @@ pxr_register_test(testHdStDynamicUvTexture
     TESTENV testenv/testHdStDynamicUvTexture
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFaceCulling_None
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFaceCulling --offscreen --repr wireOnSurf --cullStyle Nothing --write testHdStFaceCulling_cull_none.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStFaceCulling_cull_none.png
     FAIL 1
@@ -2502,10 +2501,10 @@ pxr_register_test(testHdStFaceCulling_None
     TESTENV testenv/testHdStFaceCulling
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFaceCulling_Back
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFaceCulling --offscreen --repr wireOnSurf --cullStyle Back --write testHdStFaceCulling_cull_back.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStFaceCulling_cull_back.png
     FAIL 1
@@ -2513,10 +2512,10 @@ pxr_register_test(testHdStFaceCulling_Back
     TESTENV testenv/testHdStFaceCulling
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFaceCulling_Front
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFaceCulling --offscreen --repr wireOnSurf --cullStyle Front --write testHdStFaceCulling_cull_front.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStFaceCulling_cull_front.png
     FAIL 1
@@ -2524,10 +2523,10 @@ pxr_register_test(testHdStFaceCulling_Front
     TESTENV testenv/testHdStFaceCulling
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFaceCulling_BackUnlessDoubleSided
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFaceCulling --offscreen --repr wireOnSurf --cullStyle BackUnlessDoubleSided --write testHdStFaceCulling_cull_backUnlessDS.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStFaceCulling_cull_backUnlessDS.png
     FAIL 1
@@ -2535,10 +2534,10 @@ pxr_register_test(testHdStFaceCulling_BackUnlessDoubleSided
     TESTENV testenv/testHdStFaceCulling
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFaceCulling_FrontUnlessDoubleSided
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFaceCulling --offscreen --repr wireOnSurf --cullStyle FrontUnlessDoubleSided --write testHdStFaceCulling_cull_frontUnlessDS.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStFaceCulling_cull_frontUnlessDS.png
     FAIL 1
@@ -2546,93 +2545,93 @@ pxr_register_test(testHdStFaceCulling_FrontUnlessDoubleSided
     TESTENV testenv/testHdStFaceCulling
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFrustumCullingCPU
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFrustumCulling --offscreen"
-    EXPECTED_RETURN_CODE 0
     ENV
         HD_ENABLE_GPU_FRUSTUM_CULLING=0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFrustumCullingGPU
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFrustumCulling --offscreen"
-    EXPECTED_RETURN_CODE 0
     ENV
         HD_ENABLE_GPU_FRUSTUM_CULLING=1
         HD_ENABLE_GPU_COUNT_VISIBLE_INSTANCES=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFrustumCullingGPUTinyPrims
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFrustumCulling --offscreen --tinyprim"
-    EXPECTED_RETURN_CODE 0
     ENV
         HD_ENABLE_GPU_COUNT_VISIBLE_INSTANCES=1
         HD_ENABLE_GPU_TINY_PRIM_CULLING=1
         HD_ENABLE_GPU_FRUSTUM_CULLING=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStFrustumCullingInstanceGPU
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStFrustumCulling --offscreen --instance"
-    EXPECTED_RETURN_CODE 0
     ENV
         HD_ENABLE_GPU_COUNT_VISIBLE_INSTANCES=1
         HD_ENABLE_GPU_FRUSTUM_CULLING=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStGL
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStGL"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStGLSL_instanceTransform0
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStGLSL testHarness.glslfx instanceTransform0"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStGLSL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStGLSL_instanceTransform1
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStGLSL testHarness.glslfx instanceTransform1"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStGLSL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStGLSL_instanceTransform2
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStGLSL testHarness.glslfx instanceTransform2"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStGLSL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStGLSL_instanceTransform3
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStGLSL testHarness.glslfx instanceTransform3"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStGLSL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStGLSL_determinant
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStGLSL testHarness.glslfx determinant"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStGLSL
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStHWFaceCulling
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStHWFaceCulling"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT testHdStHWFaceCulling-Run1-stdout.txt
     DIFF_COMPARE testHdStHWFaceCulling-Run1-stdout.txt
     TESTENV testenv/testHdStHWFaceCulling
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStIndirectDrawBatchCulling
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStIndirectDrawBatchCulling"
-    EXPECTED_RETURN_CODE 0
     ENV
         HD_ENABLE_GPU_TINY_PRIM_CULLING=true
         HD_ENABLE_GPU_FRUSTUM_CULLING=true
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInitRepr
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInitRepr --offscreen --outputFilePrefix testHdStInitRepr"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInitRepr_0.png
         testHdStInitRepr_1.png
@@ -2643,10 +2642,10 @@ pxr_register_test(testHdStInitRepr
     TESTENV testenv/testHdStInitRepr
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --write testHdStInstancing.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancing.png
     FAIL 1
@@ -2656,10 +2655,10 @@ pxr_register_test(testHdStInstancing
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing_Refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --refineLevel 2 --repr refined --write testHdStInstancing_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancing_refined.png
     FAIL 1
@@ -2669,10 +2668,10 @@ pxr_register_test(testHdStInstancing_Refined
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing_Wire
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --repr wire --write testHdStInstancing_wire.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancing_wire.png
     FAIL 1
@@ -2682,18 +2681,18 @@ pxr_register_test(testHdStInstancing_Wire
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing_NoPrimvars
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --noprimvars"
-    EXPECTED_RETURN_CODE 0
     TESTENV testenv/testHdStInstancing
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing_Div4_Level4
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --div 5 --level 2 --write testHdStInstancing_div5_level2.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancing_div5_level2.png
     FAIL 1
@@ -2702,10 +2701,10 @@ pxr_register_test(testHdStInstancing_Div4_Level4
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing_Div5_Level2
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --div 4 --level 4 --repr refined --refineLevel 2 --write testHdStInstancing_div4_level4_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancing_div4_level4_refined.png
     FAIL 1
@@ -2715,10 +2714,10 @@ pxr_register_test(testHdStInstancing_Div5_Level2
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancing_Div3_Level3
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancing --offscreen --div 3 --level 3 --rootTransform --write testHdStInstancing_div3_level3_rootTransform.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancing_div3_level3_rootTransform.png
     FAIL 1
@@ -2728,10 +2727,10 @@ pxr_register_test(testHdStInstancing_Div3_Level3
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancingUnbalanced
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancingUnbalanced --offscreen --write testHdStInstancingUnbalanced.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancingUnbalanced.png
     FAIL 1
@@ -2740,10 +2739,10 @@ pxr_register_test(testHdStInstancingUnbalanced
     TESTENV testenv/testHdStInstancingUnbalanced
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStInstancingUnbalancedNoBindless
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStInstancingUnbalanced --offscreen --write testHdStInstancingUnbalancedNoBindless.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStInstancingUnbalancedNoBindless.png
     FAIL 1
@@ -2753,81 +2752,81 @@ pxr_register_test(testHdStInstancingUnbalancedNoBindless
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 if (${PXR_ENABLE_MATERIALX_SUPPORT})
 pxr_register_test(testHdStMaterialXShaderGen_UsdPSdefault
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename usd_preview_surface_default.mtlx"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_UsdPSdefault.out
     DIFF_COMPARE shadergen_UsdPSdefault.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_SSmarble
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename standard_surface_marble_solid.mtlx"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_SSmarble.out
     DIFF_COMPARE shadergen_SSmarble.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_SScopper
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename standard_surface_copper.mtlx"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_SScopper.out
     DIFF_COMPARE shadergen_SScopper.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_SSdefault
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename standard_surface_default.mtlx --config materialTag:customTag"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_SSdefault.out
     DIFF_COMPARE shadergen_SSdefault.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_UsdPStextured
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename usd_preview_surface_brass_tiled.mtlx --textureName image_color_file --textureName image_roughness_file"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_UsdPStextured.out
     DIFF_COMPARE shadergen_UsdPStextured.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_SStextured
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename standard_surface_brass_tiled.mtlx --textureName image_color_file --textureName image_roughness_file --primvarMap uv:vector2"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_SStextured.out
     DIFF_COMPARE shadergen_SStextured.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_UsdPSglass
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename usd_preview_surface_glass.mtlx"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_UsdPSglass.out
     DIFF_COMPARE shadergen_UsdPSglass.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_SStextured_bindless
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename standard_surface_brass_tiled.mtlx --textureName image_color_file --textureName image_roughness_file --primvarMap uv:vector2 --bindless"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_SStextured_bindless.out
     DIFF_COMPARE shadergen_SStextured_bindless.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMaterialXShaderGen_texcoord
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMaterialXShaderGen --filename texcoord.mtlx --primvarMap st:vector2"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT shadergen_texcoord.out
     DIFF_COMPARE shadergen_texcoord.out
     TESTENV testenv/testHdStMaterialXShaderGen
+    LABELS "requires_gpu"
 )
 endif()
 pxr_register_test(testHdStMeshTopology
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMeshTopology"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStMultipleFvarTopologies
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStMultipleFvarTopologies --offscreen --repr refinedWireOnSurf --refineLevel 1"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStMultipleFvarTopologies_0.png
         testHdStMultipleFvarTopologies_1.png
@@ -2840,10 +2839,10 @@ pxr_register_test(testHdStMultipleFvarTopologies
     TESTENV testenv/testHdStMultipleFvarTopologies
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPrimGather
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPrimGather  --offscreen"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStNestedDelegate_.png
         testHdStNestedDelegate_a.png
@@ -2862,38 +2861,38 @@ pxr_register_test(testHdStPrimGather
     FAIL_PERCENT 1
     PERCEPTUAL
     TESTENV testenv/testHdStPrimGather
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPrimitiveParam
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPrimitiveParam"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPrimvars
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPrimvars"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT testHdStPrimvars-Run1-stdout.txt
     DIFF_COMPARE testHdStPrimvars-Run1-stdout.txt
     TESTENV testenv/testHdStPrimvars
     ENV
         HDST_ENABLE_MATERIAL_PRIMVAR_FILTERING=0
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStQuadrangulation
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStQuadrangulation"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStRenderPass
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStRenderPass"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStSamplerObjectRegistry
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStSamplerObjectRegistry --offscreen"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         outSampler1.png
         outSampler2.png
@@ -2902,19 +2901,19 @@ pxr_register_test(testHdStSamplerObjectRegistry
     FAIL_PERCENT 1
     PERCEPTUAL
     TESTENV testenv/testHdStSamplerObjectRegistry
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStSubdivisionOsd3
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStSubdivision"
-    EXPECTED_RETURN_CODE 0
     STDOUT_REDIRECT testHdStSubdivisionOsd3-Run1-stdout.txt
     DIFF_COMPARE testHdStSubdivisionOsd3-Run1-stdout.txt
     TESTENV testenv/testHdStSubdivisionOsd3
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStTextureHandleRegistry
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStTextureHandleRegistry --offscreen"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         outTextureBasic.png
         outTextureSampler1LowRes.png
@@ -2929,10 +2928,10 @@ pxr_register_test(testHdStTextureHandleRegistry
     FAIL 1
     FAIL_PERCENT 1
     PERCEPTUAL
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStTextureObjectRegistry
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStTextureObjectRegistry --offscreen"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         outTexture1FullRes.png
         outTexture1LowRes.png
@@ -2943,10 +2942,10 @@ pxr_register_test(testHdStTextureObjectRegistry
     FAIL_PERCENT 1
     PERCEPTUAL
     TESTENV testenv/testHdStTextureObjectRegistry
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStTransition0
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStTransition --offscreen --outputFilePrefix testHdStTransition0 --repr hull -c draw,animate=/cube1,repr=smoothHull,draw,repr=hull,draw,refineLevel=1,repr=refined,draw,refineLevel=2,draw"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStTransition0_0.png
         testHdStTransition0_1.png
@@ -2960,10 +2959,10 @@ pxr_register_test(testHdStTransition0
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStTransition1
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStTransition --offscreen --outputFilePrefix testHdStTransition1 --repr smoothHull -c draw,animate=/cube1,animate=/grid1,animate=/curve2,animate=/points3,repr=hull,draw"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStTransition1_0.png
         testHdStTransition1_1.png
@@ -2974,10 +2973,10 @@ pxr_register_test(testHdStTransition1
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStTransition2
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStTransition --offscreen --outputFilePrefix testHdStTransition2 --repr smoothHull -c draw,clipPlane=1:0:0:1,draw,clipPlane=-1:0:0:1,draw"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStTransition2_0.png
         testHdStTransition2_1.png
@@ -2989,10 +2988,10 @@ pxr_register_test(testHdStTransition2
     ENV
         HD_ENABLE_FORCE_QUADRANGULATE=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStTransitionRefinedCurves
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStTransition --offscreen --outputFilePrefix testHdStTransitionRefinedCurves0 --repr hull -c draw,repr=smoothHull,draw"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStTransitionRefinedCurves0_0.png
         testHdStTransitionRefinedCurves0_1.png
@@ -3003,12 +3002,13 @@ pxr_register_test(testHdStTransitionRefinedCurves
     ENV
         HD_ENABLE_REFINED_CURVES=1
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStSubResourceRegistry
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStSubResourceRegistry"
-    EXPECTED_RETURN_CODE 0
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 
 # Certain tests use plugins that require shared libraries.
@@ -3027,7 +3027,6 @@ pxr_build_test(testHdStPtex
 )
 pxr_register_test(testHdStPtex
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex test.ptx --offscreen --write testHdStPtex.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtex.png
     FAIL 1
@@ -3036,10 +3035,10 @@ pxr_register_test(testHdStPtex
     TESTENV testenv/testHdStPtex
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtex_Refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex test.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtex_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtex_refined.png
     FAIL 1
@@ -3048,10 +3047,10 @@ pxr_register_test(testHdStPtex_Refined
     TESTENV testenv/testHdStPtex
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexBindless
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex test.ptx --offscreen --write testHdStPtex.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtex.png
     FAIL 1
@@ -3061,10 +3060,10 @@ pxr_register_test(testHdStPtexBindless
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=true
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexBindless_Refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex test.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtex_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtex_refined.png
     FAIL 1
@@ -3074,10 +3073,10 @@ pxr_register_test(testHdStPtexBindless_Refined
     ENV
         HGIGL_ENABLE_BINDLESS_BUFFER=true
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron.ptx --offscreen --write testHdStPtexTetrahedron.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron.png
     FAIL 1
@@ -3086,10 +3085,10 @@ pxr_register_test(testHdStPtexTetrahedron
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Loop
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --loop --ptex tetrahedron.ptx --offscreen --write testHdStPtexTetrahedron_loop.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_loop.png
     FAIL 1
@@ -3098,10 +3097,10 @@ pxr_register_test(testHdStPtexTetrahedron_Loop
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_ForceQuads
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron_force_quads.ptx --offscreen --write testHdStPtexTetrahedron_force_quads.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_force_quads.png
     FAIL 1
@@ -3110,10 +3109,10 @@ pxr_register_test(testHdStPtexTetrahedron_ForceQuads
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Quads
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron_quads.ptx --offscreen --write testHdStPtexTetrahedron_quads.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_quads.png
     FAIL 1
@@ -3122,10 +3121,10 @@ pxr_register_test(testHdStPtexTetrahedron_Quads
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Quads_ForceTris
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron_quads_force_tris.ptx --offscreen --write testHdStPtexTetrahedron_quads_force_tris.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_quads_force_tris.png
     FAIL 1
@@ -3134,10 +3133,10 @@ pxr_register_test(testHdStPtexTetrahedron_Quads_ForceTris
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Refined
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtexTetrahedron_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_refined.png
     FAIL 1
@@ -3146,10 +3145,10 @@ pxr_register_test(testHdStPtexTetrahedron_Refined
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Refined_Loop
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --loop --ptex tetrahedron.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtexTetrahedron_refined_loop.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_refined_loop.png
     FAIL 1
@@ -3158,10 +3157,10 @@ pxr_register_test(testHdStPtexTetrahedron_Refined_Loop
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Refined_ForceQuads
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron_force_quads.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtexTetrahedron_force_quads_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_force_quads_refined.png
     FAIL 1
@@ -3170,10 +3169,10 @@ pxr_register_test(testHdStPtexTetrahedron_Refined_ForceQuads
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Refined_Quads
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron_quads.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtexTetrahedron_quads_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_quads_refined.png
     FAIL 1
@@ -3182,10 +3181,10 @@ pxr_register_test(testHdStPtexTetrahedron_Refined_Quads
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 pxr_register_test(testHdStPtexTetrahedron_Refined_Quads_ForceTris
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStPtex --ptex tetrahedron_quads_force_tris.ptx --offscreen --refineLevel 2 --repr refined --write testHdStPtexTetrahedron_quads_force_tris_refined.png"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStPtexTetrahedron_quads_force_tris_refined.png
     FAIL 1
@@ -3194,6 +3193,7 @@ pxr_register_test(testHdStPtexTetrahedron_Refined_Quads_ForceTris
     TESTENV testenv/testHdStPtexTetrahedron
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 endif() # PXR_ENABLE_PTEX_SUPPORT
 
@@ -3209,7 +3209,6 @@ pxr_build_test(testHdStShaders
 )
 pxr_register_test(testHdStShaders
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testHdStShaders --offscreen --outputFilePrefix testHdStShaders"
-    EXPECTED_RETURN_CODE 0
     IMAGE_DIFF_COMPARE
         testHdStShaders_0.png
         testHdStShaders_1.png
@@ -3228,5 +3227,6 @@ pxr_register_test(testHdStShaders
     TESTENV testenv/testHdStShaders
     ENV
         TF_DEBUG=HD_SAFE_MODE
+    LABELS "requires_gpu"
 )
 endif() # TARGET shared_libs

@@ -329,95 +329,95 @@ pxr_build_test(testUsdImagingCollectionPredicateLibrary
 # Register tests to be run
 pxr_register_test(testUsdImagingDataSourceAttribute
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingDataSourceAttribute"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingDelegate
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingDelegate"
     TESTENV testenv/testUsdImagingDelegate
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingDelegateChanges
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingDelegateChanges"
     TESTENV testenv/testUsdImagingDelegateChanges
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingExcluded
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingExcluded"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 # Tests that rely on plugins aren't currently supported in static builds.
 if (BUILD_SHARED_LIBS)
     pxr_register_test(testUsdImagingMaterialBinding
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingMaterialBinding"
         TESTENV testenv/testUsdImagingMaterialBinding
-        EXPECTED_RETURN_CODE 0
+        LABELS "requires_gpu"
     )
     pxr_register_test(testUsdImagingColorSpace
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingColorSpace"
         TESTENV testenv/testUsdImagingColorSpace
-        EXPECTED_RETURN_CODE 0
+        LABELS "requires_gpu"
     )
 endif()
 pxr_register_test(testUsdImagingNestedInstancingCategories
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingNestedInstancingCategories"
     TESTENV testenv/testUsdImagingNestedInstancingCategories
-    EXPECTED_RETURN_CODE 0
     ENV
         USD_ASSIGN_PROTOTYPES_DETERMINISTICALLY=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingPrimvarUtils
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingPrimvarUtils"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingRerootingSceneIndex
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingRerootingSceneIndex"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingRootPrim
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingRootPrim"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingPiPrototypeSceneIndex
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingPiPrototypeSceneIndex"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingStageSceneIndex
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingStageSceneIndex"
     TESTENV testenv/testUsdImagingStageSceneIndex
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingStageSceneIndexContents
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingStageSceneIndexContents basic.usda basic.txt"
     TESTENV testenv/testUsdImagingStageSceneIndexContents
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         basic.txt
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingInstanceProxyTraversal_1
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingInstanceProxyTraversal 1_simple.usda"
     TESTENV testenv/testUsdImagingInstanceProxyTraversal
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         1_simple_usdTraversal.txt
         1_simple_sceneIndexTraversal.txt
         1_simple_sceneIndexInstanceProxyTraversal.txt
     ENV
         USD_ASSIGN_PROTOTYPES_DETERMINISTICALLY=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingInstanceProxyTraversal_2
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingInstanceProxyTraversal 2_ni-2-levels.usda"
     TESTENV testenv/testUsdImagingInstanceProxyTraversal
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         2_ni-2-levels_usdTraversal.txt
         2_ni-2-levels_sceneIndexTraversal.txt
         2_ni-2-levels_sceneIndexInstanceProxyTraversal.txt
     ENV
         USD_ASSIGN_PROTOTYPES_DETERMINISTICALLY=1
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingCollectionPredicateLibrary
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingCollectionPredicateLibrary"
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 # This test requires MaterialX support and is not currently supported on static 
@@ -436,38 +436,38 @@ pxr_build_test(testUsdImagingHdMtlx
 )
 pxr_register_test(testUsdImagingHdMtlx_withMtlxVersion
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingHdMtlx --filename withMtlxVersion.usda"
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         withMtlxVersion.mtlx
     TESTENV testenv/testUsdImagingHdMtlx
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingHdMtlx_withoutMtlxVersion
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingHdMtlx --filename withoutMtlxVersion.usda"
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         withoutMtlxVersion.mtlx
     TESTENV testenv/testUsdImagingHdMtlx
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingHdMtlx_atan2Node
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingHdMtlx --filename atan2Node.usda"
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         atan2Node.mtlx
     TESTENV testenv/testUsdImagingHdMtlx
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingHdMtlx_switchNode
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingHdMtlx --filename switchNode.usda"
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         switchNode.mtlx
     TESTENV testenv/testUsdImagingHdMtlx
+    LABELS "requires_gpu"
 )
 pxr_register_test(testUsdImagingHdMtlx_swizzleNode
     COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdImagingHdMtlx --filename swizzleNode.usda"
-    EXPECTED_RETURN_CODE 0
     DIFF_COMPARE
         swizzleNode.mtlx
     TESTENV testenv/testUsdImagingHdMtlx
+    LABELS "requires_gpu"
 )
 
 endif() # BUILD_SHARED_LIBS AND PXR_ENABLE_MATERIALX_SUPPORT

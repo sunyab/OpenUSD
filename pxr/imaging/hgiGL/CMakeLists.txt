@@ -89,7 +89,7 @@ pxr_register_test(testHgiGL
     FAIL 1
     FAIL_PERCENT 0.001
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 # This test is not currently supported on static builds as it relies on 
@@ -104,7 +104,7 @@ pxr_register_test(testHgiGLCommand
     FAIL 1
     FAIL_PERCENT 0.001
     PERCEPTUAL
-    EXPECTED_RETURN_CODE 0
+    LABELS "requires_gpu"
 )
 
 endif() # BUILD_SHARED_LIBS

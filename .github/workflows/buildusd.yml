@@ -95,14 +95,14 @@ jobs:
         working-directory: ./USDgen/build/OpenUSD
         run: |
           ctest --output-on-failure -j4 -C Release \
-                --exclude-regex "^(testUsdview|testUsdRecord|testUsdAppUtilsFrameRecorder|testUsdImaging|testHgiGL|testHdx|testHdSt|testExecGeomXformable_Perf_Large|testWorkThreadLimitsDefault|testSdfUsdcMalformed.*)" \
-                -LE flaky --no-tests=error
+                --exclude-regex "^(testExecGeomXformable_Perf_Large|testWorkThreadLimitsDefault|testSdfUsdcMalformed.*)" \
+                -LE flaky -LE requires_gpu --no-tests=error
       - name: Run USD Headless Tests (flaky)
         working-directory: ./USDgen/build/OpenUSD
         run: |
           ctest --output-on-failure -j4 -C Release \
-                --exclude-regex "^(testUsdview|testUsdRecord|testUsdAppUtilsFrameRecorder|testUsdImaging|testHgiGL|testHdx|testHdSt|testExecGeomXformable_Perf_Large|testWorkThreadLimitsDefault)" \
-                -L flaky --repeat until-pass:3
+                --exclude-regex "^(testExecGeomXformable_Perf_Large|testWorkThreadLimitsDefault)" \
+                -L flaky -LE requires_gpu --repeat until-pass:3
 
   GPUTests:
     needs:
@@ -156,9 +156,8 @@ jobs:
           sudo xvfb-run --server-args="-screen 0 2560x1600x24 +extension GLX +render" \
           sudo vglrun +v -d egl \
           ctest --output-on-failure -j4 -V -C Release \
-                --tests-regex "^(testUsdview|testUsdRecord|testUsdAppUtilsFrameRecorder|testUsdImaging|testHgiGL|testHdx|testHdSt)" \
                 --exclude-regex "^($(paste -sd "|" ${{ github.workspace }}/.github/workflows/tests_to_ignore.txt))$" \
-                -LE flaky --no-tests=error
+                -LE flaky -L requires_gpu --no-tests=error
       - name: Run USD GPU Tests (flaky)
         working-directory: ./USDgen/build/OpenUSD
         run: |
@@ -168,7 +167,7 @@ jobs:
           ctest --output-on-failure -j4 -V -C Release \
                 --tests-regex "^(testUsdview|testUsdRecord|testUsdAppUtilsFrameRecorder|testUsdImaging|testHgiGL|testHdx|testHdSt)" \
                 --exclude-regex "^($(paste -sd "|" ${{ github.workspace }}/.github/workflows/tests_to_ignore.txt))$" \
-                -L flaky --repeat until-pass:3
+                -L flaky -L requires_gpu --repeat until-pass:3
       - name: Prepare Test Artifacts
         if: always()
         working-directory: ./USDgen/build/OpenUSD

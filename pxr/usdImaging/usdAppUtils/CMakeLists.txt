@@ -75,5 +75,6 @@ if (NOT PXR_HEADLESS_TEST_MODE AND NOT WIN32 AND NOT APPLE)
         COMMAND "${CMAKE_INSTALL_PREFIX}/tests/testUsdAppUtilsFrameRecorder"
         TESTENV testenv/FrameRecorderTest
         EXPECTED_RETURN_CODE 0
+        LABELS "requires_gpu"
     )
 endif()

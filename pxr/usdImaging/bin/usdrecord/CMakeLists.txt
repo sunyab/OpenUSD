@@ -50,6 +50,7 @@ pxr_register_test(testUsdRecordSingleFrame
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/RecordTest
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdRecordMultipleFrames
@@ -65,6 +66,7 @@ pxr_register_test(testUsdRecordMultipleFrames
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/RecordTest
+    LABELS "requires_gpu"
 )
 
 if (PXR_BUILD_PRMAN_PLUGIN OR PXR_BUILD_EMBREE_PLUGIN)
@@ -81,6 +83,7 @@ if (PXR_BUILD_PRMAN_PLUGIN OR PXR_BUILD_EMBREE_PLUGIN)
         TESTENV testenv/RecordTest
         ENV
             RMANTREE=${RENDERMAN_LOCATION}
+        LABELS "requires_gpu"    
     )
 
     pxr_register_test(testUsdRecordMultipleFrames_NoGpu
@@ -98,6 +101,7 @@ if (PXR_BUILD_PRMAN_PLUGIN OR PXR_BUILD_EMBREE_PLUGIN)
         TESTENV testenv/RecordTest
         ENV
             RMANTREE=${RENDERMAN_LOCATION}
+        LABELS "requires_gpu"    
     )
 endif()
 
@@ -113,6 +117,7 @@ pxr_register_test(testUsdRecordSessionLayer
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/RecordTest
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdRecordSmallObject
@@ -126,6 +131,7 @@ pxr_register_test(testUsdRecordSmallObject
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/SmallObjectTest
+    LABELS "requires_gpu"
 )
 
 # XXX: Temporarily disable test due to intermittent failures
@@ -143,6 +149,7 @@ pxr_register_test(testUsdRecordSmallObject
 #         TESTENV testenv/MotionBlurTest
 #         ENV
 #             RMANTREE=${RENDERMAN_LOCATION}
+#         LABELS "requires_gpu"
 #     )
 # endif()
 
@@ -159,6 +166,7 @@ pxr_register_test(testUsdRecordSingleFrame_SceneIndex
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/RecordTest
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdRecordMultipleFrames_SceneIndex
@@ -174,6 +182,7 @@ pxr_register_test(testUsdRecordMultipleFrames_SceneIndex
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/RecordTest
+    LABELS "requires_gpu"
 )
     
 if (PXR_BUILD_PRMAN_PLUGIN OR PXR_BUILD_EMBREE_PLUGIN)
@@ -190,6 +199,7 @@ if (PXR_BUILD_PRMAN_PLUGIN OR PXR_BUILD_EMBREE_PLUGIN)
         TESTENV testenv/RecordTest
         ENV
             RMANTREE=${RENDERMAN_LOCATION}
+        LABELS "requires_gpu"    
     )
     pxr_register_test(testUsdRecordMultipleFrames_SceneIndex_NoGpu
         PYTHON
@@ -206,6 +216,7 @@ if (PXR_BUILD_PRMAN_PLUGIN OR PXR_BUILD_EMBREE_PLUGIN)
         TESTENV testenv/RecordTest
         ENV
             RMANTREE=${RENDERMAN_LOCATION}
+        LABELS "requires_gpu"    
     )
 endif()
 
@@ -220,6 +231,7 @@ pxr_register_test(testUsdRecordSessionLayer_SceneIndex
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/RecordTest
+    LABELS "requires_gpu"
 )
 
 pxr_register_test(testUsdRecordSmallObject_SceneIndex
@@ -233,6 +245,7 @@ pxr_register_test(testUsdRecordSmallObject_SceneIndex
     WARN_PERCENT 0.0075
     EXPECTED_RETURN_CODE 0
     TESTENV testenv/SmallObjectTest
+    LABELS "requires_gpu"
 )
 
 # XXX: Temporarily disable test due to intermittent failures
@@ -250,5 +263,6 @@ pxr_register_test(testUsdRecordSmallObject_SceneIndex
 #         TESTENV testenv/MotionBlurTest
 #         ENV
 #             RMANTREE=${RENDERMAN_LOCATION}
+#         LABELS "requires_gpu"
 #     )
 # endif()
