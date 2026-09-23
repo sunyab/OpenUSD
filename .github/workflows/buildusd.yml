@@ -77,7 +77,7 @@ jobs:
           if [ "$GITHUB_EVENT_NAME" == "push" ]; then
             python3 build_scripts/build_usd.py --tests --no-materialx --build USDgen/build --src USDgen/src USDinst --build-args USD,"-DPXR_HEADLESS_TEST_MODE=OFF" OPENIMAGEIO,"-DUSE_OpenJPEG=OFF" -v
           else
-            python3 build_scripts/build_usd.py --no-materialx --build USDgen/build --src USDgen/src USDinst --build-args USD,"-DPXR_HEADLESS_TEST_MODE=ON -DPXR_BUILD_TESTS=ON" OPENIMAGEIO,"-DUSE_OpenJPEG=OFF" -v
+            python3 build_scripts/build_usd.py --no-materialx --build USDgen/build --src USDgen/src USDinst --build-args USD,"-DPXR_HEADLESS_TEST_MODE=ON -DPXR_BUILD_TESTS=ON" OPENIMAGEIO,"-DUSE_OpenJPEG=OFF" -vv
           fi
       - name: Save Build Artifacts to Cache
         if: steps.cache-usd-build-dependency.outputs.cache-hit != 'true'
